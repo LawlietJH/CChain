@@ -13,7 +13,7 @@ import os
 import sys
 
 Autor = "LawlietJH"
-Version = "v1.0.3"
+Version = "v1.0.4"
 
 #=============================================================================
 #================================ Hexadecimal ================================
@@ -27,7 +27,7 @@ def Hex_Ascii(Hex):
 
 	Ascii = ''.join((chr(int(Hex[i:i+2], 16)) for i in range(0, len(Hex), 2)))
 	
-	print("\n\n [+] Ascii: \n\n >> " + Ascii)
+	return Ascii
 
 
 
@@ -49,7 +49,7 @@ def Hex_Bin(Hex):
 			Cadena = Cadena + b + " "
 			cont = 0
 	
-	print("\n\n [+] Binario: \n\n >> " + Cadena)
+	return Cadena
 
 
 
