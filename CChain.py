@@ -61,10 +61,8 @@ def Hex_Dec(Hex):
 	lista = []
 	Decimal = ""
 	
-	#~ Hex = input("\n\n\t Hexadecimal: \n\n >> ")
-	
-	Hex = Hex.upper()				#~ Ponemos Todo En Mayusculas.
-	Hex = Hex.replace(" ", "")		#~ Quitamos Los Espacios.
+	Hex = Hex.upper()				#~ Pone Todo En Mayusculas.
+	Hex = Hex.replace(" ", "")		#~ Quita Los Espacios.
 	
 	for i in Hex:
 		cont += 1
@@ -79,7 +77,7 @@ def Hex_Dec(Hex):
 	for Dec in lista:
 		Decimal += Dec
 	
-	print("\n\n [+] Decimal: \n\n >> " + Decimal)
+	return Decimal
 
 
 
