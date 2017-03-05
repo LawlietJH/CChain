@@ -13,7 +13,7 @@ import os
 import sys
 
 Autor = "LawlietJH"
-Version = "v1.0.2"
+Version = "v1.0.3"
 
 #=============================================================================
 #================================ Hexadecimal ================================
@@ -50,6 +50,37 @@ def Hex_Bin(Hex):
 			cont = 0
 	
 	print("\n\n [+] Binario: \n\n >> "+Cadena)
+
+
+
+def Hex_Dec(Hex):
+	#~ Hexadecimal a Decimal.
+	
+	xD = ""
+	cont = 0
+	lista = []
+	
+	#~ Hex = input("\n\n\t Hexadecimal: \n\n >> ")
+	
+	Hex = Hex.upper()				#~ Ponemos Todo En Mayusculas.
+	Hex = Hex.replace(" ", "")		#~ Quitamos Los Espacios.
+	
+	for i in Hex:
+		cont += 1
+		
+		if cont % 2 != 0:
+			xD = xD + i
+		else:
+			xD = xD + i
+			lista.append(str(eval("0x" + xD)) + " ")
+			xD = ""
+	
+	print("\n\n [+] Decimal: \n\n >> ", end='')
+	for Dec in lista:
+		print(Dec, end='')
+	
+	print("")
+
 
 
 #=============================================================================
