@@ -42,7 +42,7 @@ def Hex_Bin(Hex):	#~ Hexadecimal a Binario.
 
 	Bin = ''.join((bin(int(Hex[i:i+2], 16))[2:].zfill(8) for i in range(0, len(Hex), 2)))
 	
-	#~ Se separa la cadena con un espacio en cada byte.
+	#~ Se Separa la Cadena con un Espacio en Cada Byte.
 	for b in Bin:
 		
 		cont += 1
@@ -61,26 +61,28 @@ def Hex_Bin(Hex):	#~ Hexadecimal a Binario.
 def Hex_Dec(Hex):	#~ Hexadecimal a Decimal.
 	
 	xD = ""
-	cont = 0
-	lista = []
+	Cont = 0
+	Lista = []
 	Decimal = ""
 	
 	Hex = Hex.upper()				#~ Pone Todo En Mayusculas.
 	Hex = Hex.replace(" ", "")		#~ Quita Los Espacios.
 	
+	
+	#~ Se Separa la Cadena con un Espacio en Cada Número.
 	for i in Hex:
 		
-		cont += 1
+		Cont += 1
 		
-		if cont % 2 != 0:
+		if Cont % 2 != 0:
 			xD = xD + i
 			
 		else:
 			xD = xD + i
-			lista.append(str(eval("0x" + xD)) + " ")
+			Lista.append(str(eval("0x" + xD)) + " ")	#~ Se Añade Cada Número a la Lista.
 			xD = ""
 	
-	for Dec in lista:
+	for Dec in Lista:	#~ Se Añade Cada Número a la Cadena. 
 		Decimal += Dec
 	
 	return Decimal
@@ -100,6 +102,7 @@ def Asc_Hex(Ascii):	#~ Ascii a Hexadecimal.
 	
 	Hex = ''.join((hex(ord(c))[2:] for c in Ascii))
 	
+	#~ Se Separa la Cadena con un Espacio en Cada Byte.
 	for x in Hex:
 		
 		cont += 1
@@ -121,7 +124,7 @@ def Asc_Bin(Ascii):	#~ Ascii a Binario.
 
 	Bin = ''.join((bin(ord(c))[2:].zfill(8) for c in Ascii))
 	
-	#~ Se separa la cadena con un espacio en cada byte.
+	#~ Se Separa la Cadena con un Espacio en Cada Byte.
 	for b in Bin:
 		
 		cont += 1
@@ -176,4 +179,4 @@ Bin = "01101000 01101111 01101100 01100001"
 
 
 Dec = Asc_Dec(Asc)
-print("\n\n [+] Decimal: \n\n >> " + Dec)
+print("\n\n [*] Ascii: \n\n >> " + Asc + "\n\n\n --> Convertido <--\n\n\n [+] Decimal: \n\n >> " + Dec)
