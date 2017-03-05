@@ -8,13 +8,13 @@
 #                ╚██████╗╚██████╗██║  ██║██║  ██║██║██║ ╚████║
 #                 ╚═════╝ ╚═════╝╚═╝  ╚═╝╚═╝  ╚═╝╚═╝╚═╝  ╚═══╝
 #                                                         By: LawlietJH
-#                                                              v1.0.6
+#                                                              v1.0.7
 
 import os
 import sys
 
 Autor = "LawlietJH"
-Version = "v1.0.6"
+Version = "v1.0.7"
 
 #=============================================================================
 #================================ Hexadecimal ================================
@@ -92,15 +92,20 @@ def Asc_Hex(Ascii):
 	#~ Ascii a Hexadecimal
 	
 	cont = 0
-	Hex = ''.join((hex(ord(c))[2:] for c in Ascii))
+	Hex = ""
+	
+	Hexadecimal = ''.join((hex(ord(c))[2:] for c in Ascii))
 	
 	print("\n\n [+] Hexadecimal: \n\n >> ", end='')
 	
-	for x in Hex:
+	for x in Hexadecimal:
 		cont += 1
 		if cont % 2 != 0:
+			Hex += x
 			print(x, end='')
+			
 		else:
+			Hex += x + " "
 			print(x, end=' ')
 	
 	print("")
@@ -138,3 +143,6 @@ Hex = "68 6f 6c 61"
 Asc = "hola"
 Dec = "104 111 108 97"
 Bin = "01101000 01101111 01101100 01100001"
+
+
+Asc_Hex(Asc)
