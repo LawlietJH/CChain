@@ -8,13 +8,13 @@
 #                ╚██████╗╚██████╗██║  ██║██║  ██║██║██║ ╚████║
 #                 ╚═════╝ ╚═════╝╚═╝  ╚═╝╚═╝  ╚═╝╚═╝╚═╝  ╚═══╝
 #                                                         By: LawlietJH
-#                                                              v1.1.1
+#                                                              v1.1.2
 
 import os
 import sys
 
 Autor = "LawlietJH"
-Version = "v1.1.1"
+Version = "v1.1.2"
 
 
 
@@ -93,7 +93,7 @@ def Hex_Dec(Hex):	#~ Hexadecimal a Decimal.
 
 
 
-def Asc_Hex(Ascii):	#~ Ascii a Hexadecimal
+def Asc_Hex(Ascii):	#~ Ascii a Hexadecimal.
 	
 	cont = 0
 	Hexadecimal = ""
@@ -114,7 +114,7 @@ def Asc_Hex(Ascii):	#~ Ascii a Hexadecimal
 
 
 
-def Asc_Bin(Ascii):	#~ Ascii a Binario
+def Asc_Bin(Ascii):	#~ Ascii a Binario.
 	
 	cont = 0
 	Binario = ""
@@ -137,19 +137,19 @@ def Asc_Bin(Ascii):	#~ Ascii a Binario
 
 
 
-def Asc_Dec(Ascii):	#~ Ascii a Decimal
+def Asc_Dec(Ascii):	#~ Ascii a Decimal.
 	
-	lista = []
+	Lista = []
+	Decimal = ""
 	
-	for letra in Ascii:
-		lista.append(ord(letra))
+	for Letra in Ascii:				#~ Se Añaden los Caracteres a la Lista
+		Lista.append(ord(Letra))	#~ Convertidos en su Respectivo Decimal.  
 	
-	print("\n\n [+] Decimal: \n\n >> ", end='')
+	for Dec in Lista:				#~ Se Añaden los Números a la Cadena.
+		Decimal += str(Dec) + " "
 	
-	for Dec in lista:
-		print(Dec, end=' ')
-	
-	print("")
+	return Decimal
+
 
 
 #=============================================================================
@@ -175,5 +175,5 @@ Dec = "104 111 108 97"
 Bin = "01101000 01101111 01101100 01100001"
 
 
-Bin = Asc_Bin(Asc)
-print("Binario:\t ", Bin)
+Dec = Asc_Dec(Asc)
+print("\n\n [+] Decimal: \n\n >> " + Dec)
