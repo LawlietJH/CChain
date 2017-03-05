@@ -8,13 +8,13 @@
 #                ╚██████╗╚██████╗██║  ██║██║  ██║██║██║ ╚████║
 #                 ╚═════╝ ╚═════╝╚═╝  ╚═╝╚═╝  ╚═╝╚═╝╚═╝  ╚═══╝
 #                                                         By: LawlietJH
-#                                                              v1.0.7
+#                                                              v1.0.8
 
 import os
 import sys
 
 Autor = "LawlietJH"
-Version = "v1.0.7"
+Version = "v1.0.8"
 
 #=============================================================================
 #================================ Hexadecimal ================================
@@ -96,19 +96,19 @@ def Asc_Hex(Ascii):
 	
 	Hexadecimal = ''.join((hex(ord(c))[2:] for c in Ascii))
 	
-	print("\n\n [+] Hexadecimal: \n\n >> ", end='')
-	
 	for x in Hexadecimal:
+		
 		cont += 1
+		
 		if cont % 2 != 0:
 			Hex += x
 			print(x, end='')
-			
+		
 		else:
 			Hex += x + " "
 			print(x, end=' ')
-	
-	print("")
+		
+	return Hex
 
 
 
