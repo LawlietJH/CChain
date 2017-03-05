@@ -8,23 +8,23 @@
 #                ╚██████╗╚██████╗██║  ██║██║  ██║██║██║ ╚████║
 #                 ╚═════╝ ╚═════╝╚═╝  ╚═╝╚═╝  ╚═╝╚═╝╚═╝  ╚═══╝
 #                                                         By: LawlietJH
-#                                                              v1.0.8
+#                                                              v1.0.9
 
 import os
 import sys
 
 Autor = "LawlietJH"
-Version = "v1.0.8"
+Version = "v1.0.9"
 
 #=============================================================================
 #================================ Hexadecimal ================================
 #=============================================================================
 
 
-def Hex_Asc(Hex):
-	#~ Hexadecimal a Ascii
+
+def Hex_Asc(Hex):	#~ Hexadecimal a Ascii
 	
-	Hex = Hex.replace(" ", "")
+	Hex = Hex.replace(" ", "")		#~ Quita los espacios.
 
 	Ascii = ''.join((chr(int(Hex[i:i+2], 16)) for i in range(0, len(Hex), 2)))
 	
@@ -32,30 +32,31 @@ def Hex_Asc(Hex):
 
 
 
-def Hex_Bin(Hex):
-	#~ Hexadecimal a Binario.
+def Hex_Bin(Hex):	#~ Hexadecimal a Binario.
 	
 	cont = 0
-	Cadena = ""
-	Hex = Hex.replace(" ", "")
+	Binario = ""
+	Hex = Hex.replace(" ", "")		#~ Quita los espacios.
 
 	Bin = ''.join((bin(int(Hex[i:i+2], 16))[2:].zfill(8) for i in range(0, len(Hex), 2)))
 	
 	#~ Se separa la cadena con un espacio en cada byte.
 	for b in Bin:
+		
 		cont += 1
+		
 		if(cont <= 7):
-			Cadena = Cadena + b
+			Binario = Binario + b
+		
 		else:
-			Cadena = Cadena + b + " "
+			Binario = Binario + b + " "
 			cont = 0
 	
-	return Cadena
+	return Binario
 
 
 
-def Hex_Dec(Hex):
-	#~ Hexadecimal a Decimal.
+def Hex_Dec(Hex):	#~ Hexadecimal a Decimal.
 	
 	xD = ""
 	cont = 0
@@ -66,10 +67,12 @@ def Hex_Dec(Hex):
 	Hex = Hex.replace(" ", "")		#~ Quita Los Espacios.
 	
 	for i in Hex:
+		
 		cont += 1
 		
 		if cont % 2 != 0:
 			xD = xD + i
+			
 		else:
 			xD = xD + i
 			lista.append(str(eval("0x" + xD)) + " ")
@@ -88,32 +91,47 @@ def Hex_Dec(Hex):
 
 
 
-def Asc_Hex(Ascii):
-	#~ Ascii a Hexadecimal
+def Asc_Hex(Ascii):	#~ Ascii a Hexadecimal
 	
 	cont = 0
-	Hex = ""
+	Hexadecimal = ""
 	
-	Hexadecimal = ''.join((hex(ord(c))[2:] for c in Ascii))
+	Hex = ''.join((hex(ord(c))[2:] for c in Ascii))
 	
-	for x in Hexadecimal:
+	for x in Hex:
 		
 		cont += 1
 		
 		if cont % 2 != 0:
-			Hex += x
+			Hexadecimal += x
 			print(x, end='')
 		
 		else:
-			Hex += x + " "
+			Hexadecimal += x + " "
 			print(x, end=' ')
 		
-	return Hex
+	return Hexadecimal
 
 
 
-def Asc_Bin():
-	pass
+def Asc_Bin():	#~ Ascii a Hexadecimal
+	
+	cont = 0
+	Cadena = ""
+	#~ Ascii = Ascii.replace(" ", "")
+
+	Bin = ''.join((bin(ord(c))[2:].zfill(8) for c in Ascii))
+	
+	#~ Se separa la cadena con un espacio en cada byte.
+	for b in Bin:
+		cont += 1
+		if(cont <= 7):
+			Cadena = Cadena + b
+		else:
+			Cadena = Cadena + b + " "
+			cont = 0
+	
+	print("\n\n [+] Binario: \n\n >> " + Cadena)
 
 
 
