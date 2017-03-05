@@ -27,7 +27,7 @@ def Hex_Ascii(Hex):
 
 	Ascii = ''.join((chr(int(Hex[i:i+2], 16)) for i in range(0, len(Hex), 2)))
 	
-	print("\n\n [+] Ascii: \n\n >> "+Ascii)
+	print("\n\n [+] Ascii: \n\n >> " + Ascii)
 
 
 
@@ -49,7 +49,7 @@ def Hex_Bin(Hex):
 			Cadena = Cadena + b + " "
 			cont = 0
 	
-	print("\n\n [+] Binario: \n\n >> "+Cadena)
+	print("\n\n [+] Binario: \n\n >> " + Cadena)
 
 
 
@@ -59,6 +59,7 @@ def Hex_Dec(Hex):
 	xD = ""
 	cont = 0
 	lista = []
+	Decimal = ""
 	
 	#~ Hex = input("\n\n\t Hexadecimal: \n\n >> ")
 	
@@ -75,14 +76,14 @@ def Hex_Dec(Hex):
 			lista.append(str(eval("0x" + xD)) + " ")
 			xD = ""
 	
-	print("\n\n [+] Decimal: \n\n >> ", end='')
 	for Dec in lista:
-		print(Dec, end='')
+		Decimal += Dec
 	
-	print("")
+	print("\n\n [+] Decimal: \n\n >> " + Decimal)
 
 
 
 #=============================================================================
+#=================================== Ascii ===================================
 #=============================================================================
-#=============================================================================
+
