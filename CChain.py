@@ -8,13 +8,15 @@
 #                ╚██████╗╚██████╗██║  ██║██║  ██║██║██║ ╚████║
 #                 ╚═════╝ ╚═════╝╚═╝  ╚═╝╚═╝  ╚═╝╚═╝╚═╝  ╚═══╝
 #                                                         By: LawlietJH
-#                                                              v1.0.9
+#                                                              v1.1.0
 
 import os
 import sys
 
 Autor = "LawlietJH"
-Version = "v1.0.9"
+Version = "v1.1.0"
+
+
 
 #=============================================================================
 #================================ Hexadecimal ================================
@@ -104,21 +106,18 @@ def Asc_Hex(Ascii):	#~ Ascii a Hexadecimal
 		
 		if cont % 2 != 0:
 			Hexadecimal += x
-			print(x, end='')
-		
+					
 		else:
 			Hexadecimal += x + " "
-			print(x, end=' ')
-		
+			
 	return Hexadecimal
 
 
 
-def Asc_Bin():	#~ Ascii a Hexadecimal
+def Asc_Bin(Ascii):	#~ Ascii a B
 	
 	cont = 0
-	Cadena = ""
-	#~ Ascii = Ascii.replace(" ", "")
+	Binario = ""
 
 	Bin = ''.join((bin(ord(c))[2:].zfill(8) for c in Ascii))
 	
@@ -126,12 +125,12 @@ def Asc_Bin():	#~ Ascii a Hexadecimal
 	for b in Bin:
 		cont += 1
 		if(cont <= 7):
-			Cadena = Cadena + b
+			Binario = Binario + b
 		else:
-			Cadena = Cadena + b + " "
+			Binario = Binario + b + " "
 			cont = 0
 	
-	print("\n\n [+] Binario: \n\n >> " + Cadena)
+	return Binario
 
 
 
@@ -163,4 +162,5 @@ Dec = "104 111 108 97"
 Bin = "01101000 01101111 01101100 01100001"
 
 
-Asc_Hex(Asc)
+Bin = Asc_Bin(Asc)
+print("Binario:\t ", Bin)
