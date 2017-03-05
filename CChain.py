@@ -8,13 +8,13 @@
 #                ╚██████╗╚██████╗██║  ██║██║  ██║██║██║ ╚████║
 #                 ╚═════╝ ╚═════╝╚═╝  ╚═╝╚═╝  ╚═╝╚═╝╚═╝  ╚═══╝
 #                                                         By: LawlietJH
-#                                                              v1.1.0
+#                                                              v1.1.1
 
 import os
 import sys
 
 Autor = "LawlietJH"
-Version = "v1.1.0"
+Version = "v1.1.1"
 
 
 
@@ -114,7 +114,7 @@ def Asc_Hex(Ascii):	#~ Ascii a Hexadecimal
 
 
 
-def Asc_Bin(Ascii):	#~ Ascii a B
+def Asc_Bin(Ascii):	#~ Ascii a Binario
 	
 	cont = 0
 	Binario = ""
@@ -123,9 +123,12 @@ def Asc_Bin(Ascii):	#~ Ascii a B
 	
 	#~ Se separa la cadena con un espacio en cada byte.
 	for b in Bin:
+		
 		cont += 1
+		
 		if(cont <= 7):
 			Binario = Binario + b
+		
 		else:
 			Binario = Binario + b + " "
 			cont = 0
@@ -134,9 +137,19 @@ def Asc_Bin(Ascii):	#~ Ascii a B
 
 
 
-def Asc_Dec():
-	pass
-
+def Asc_Dec(Ascii):	#~ Ascii a Decimal
+	
+	lista = []
+	
+	for letra in Ascii:
+		lista.append(ord(letra))
+	
+	print("\n\n [+] Decimal: \n\n >> ", end='')
+	
+	for Dec in lista:
+		print(Dec, end=' ')
+	
+	print("")
 
 
 #=============================================================================
