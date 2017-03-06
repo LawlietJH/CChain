@@ -8,14 +8,14 @@
 #                ╚██████╗╚██████╗██║  ██║██║  ██║██║██║ ╚████║
 #                 ╚═════╝ ╚═════╝╚═╝  ╚═╝╚═╝  ╚═╝╚═╝╚═╝  ╚═══╝
 #                                                         By: LawlietJH
-#                                                              v1.1.8
+#                                                              v1.1.9
 
 import time
 import sys
 import os
 
 Autor = "LawlietJH"
-Version = "v1.1.8"
+Version = "v1.1.9"
 
 
 
@@ -239,7 +239,7 @@ def Bin_Dec(Bin):	#~ Binario a Decimal
 
 
 #=============================================================================
-#=================================== Menú ====================================
+#================================== Menú Asc =================================
 #=============================================================================
 
 
@@ -295,7 +295,7 @@ def Asc_Menu():
 			
 			elif Opc == "3":
 				os.system("cls")
-				#~ Ascii a Binario:
+				#~ Ascii a Decimal:
 
 				while True:
 
@@ -321,6 +321,102 @@ def Asc_Menu():
 			time.sleep(0.5)
 			break
 			
+
+
+
+#=============================================================================
+#================================== Menú Hex =================================
+#=============================================================================
+
+
+
+def Hex_Menu():
+	
+	while True:
+		
+		try:
+			os.system("cls")
+			print("\n\n\t\t 1 - Hexadecimal a Ascii.")
+			print("\n\t\t 2 - Hexadecimal a Binario.")
+			print("\n\t\t 3 - Hexadecimal a Decimal.")
+			Opc = input("\n\n\t Opción: ")
+			
+			if Opc == "1":
+				os.system("cls")
+				#~ Hexadecimal a Ascii:
+
+				while True:
+
+					try:
+						Hex = input("\n\n\t Cadena Hexadecimal: ")
+						Asc = Hex_Asc(Hex)
+						print("\n\n\t Cadena en Ascii: " + Asc + "\n")
+						
+					except KeyboardInterrupt:			#~ Ctrl+C para volver
+						print("\n\n\t Volviendo...")
+						time.sleep(0.5)
+						break
+						
+					except:
+						print("\n\n Tiene Caracteres No Válidos.")
+			
+			elif Opc == "2":
+				os.system("cls")
+				#~ Hexadecimal a Binario:
+
+				while True:
+
+					try:
+						Hex = input("\n\n\t Cadena Hexadecimal: ")
+						Bin = Hex_Bin(Hex)
+						print("\n\n\t Cadena en Binario: " + Bin + "\n")
+						
+					except KeyboardInterrupt:			#~ Ctrl+C para volver
+						print("\n\n\t Volviendo...")
+						time.sleep(0.5)
+						break
+						
+					except:
+						print("\n\n Tiene Caracteres No Válidos.")
+			
+			elif Opc == "3":
+				os.system("cls")
+				#~ Hexadecimal a Decimal:
+
+				while True:
+
+					try:
+						Hex = input("\n\n\t Cadena Hexadecimal: ")
+						Dec = Hex_Dec(Hex)
+						print("\n\n\t Cadena en Decimal: " + Dec + "\n")
+						
+					except KeyboardInterrupt:			#~ Ctrl+C para volver
+						print("\n\n\t Volviendo...")
+						time.sleep(0.5)
+						break
+						
+					except:
+						print("\n\n Tiene Caracteres No Válidos.")
+			
+			else:
+				print("\n\n\t\t Opción no válida...")
+				time.sleep(0.5)
+				
+		except KeyboardInterrupt:			#~ Ctrl+C para volver
+			print("\n\n\t Volviendo...")
+			time.sleep(0.5)
+			break
+			
+
+
+#=============================================================================
+#================================== Menú Asc =================================
+#=============================================================================
+
+
+#=============================================================================
+#================================= Menú Ascii ================================
+#=============================================================================
 
 
 def main():
