@@ -258,7 +258,41 @@ def main():
 			Opc = input("\n\n\t Opción: ")
 			
 			if Opc == "1":
-				pass
+				os.system("cls")
+				print("\n\n\t\t 1 - Ascii a Hexadecimal.")
+				print("\n\t\t 2 - Ascii a Binario.")
+				print("\n\t\t 3 - Ascii a Decimal.")
+				Opc = input("\n\n\t Opción: ")
+				
+				if Opc == "1":
+					os.system("cls")
+					#~ Ascii a Hexadecimal:
+
+					while True:
+
+						try:
+							Asc = input("\n\n\t Cadena Ascii: ")
+							Hex = Asc_Hex(Asc)
+							print("\n\n\t Cadena en Hexadecimal: " + Hex + "\n")
+							
+						except KeyboardInterrupt:			#~ Ctrl+C para volver
+							print("\n\n\t Volviendo...")
+							time.sleep(0.5)
+							break
+							
+						except:
+							print("\n\n Tiene Caracteres No Válidos.")
+				
+				elif Opc == "2":
+					pass
+				
+				elif Opc == "3":
+					pass
+				
+				else:
+					print("\n\n\t\t Opción no válida...")
+					time.sleep(0.5)
+						
 			
 			elif Opc == "2":
 				pass
@@ -270,7 +304,8 @@ def main():
 				pass
 				
 			else:
-				pass
+				print("\n\n\t\t Opción no válida...")
+				time.sleep(0.5)
 				
 		except:
 			print("\n\n\t Bye...")
