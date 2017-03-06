@@ -414,6 +414,88 @@ def Hex_Menu():
 #=============================================================================
 
 
+
+def Bin_Menu():
+	
+	while True:
+		
+		try:
+			os.system("cls")
+			#~ print("\n\n\t\t 1 - Binario a Ascii.")
+			#~ print("\n\t\t 2 - Binario a Hexadecimal.")
+			print("\n\t\t 3 - Binario a Decimal.")
+			Opc = input("\n\n\t Opción: ")
+			
+			if Opc == "1":
+				#~ os.system("cls")
+				#~ Binario a Ascii:
+
+				#~ while True:
+
+					#~ try:
+						#~ Bin = input("\n\n\t Cadena Binaria: ")
+						#~ Asc = Bin_Asc(Bin)
+						#~ print("\n\n\t Cadena en Ascii: " + Asc + "\n")
+						
+					#~ except KeyboardInterrupt:			#~ Ctrl+C para volver
+						#~ print("\n\n\t Volviendo...")
+						#~ time.sleep(0.5)
+						#~ break
+						
+					#~ except:
+						#~ print("\n\n Tiene Caracteres No Válidos.")
+					pass
+								
+			elif Opc == "2":
+				#~ os.system("cls")
+				#~ Binario a Hexadecimal:
+
+				#~ while True:
+
+					#~ try:
+						#~ Bin = input("\n\n\t Cadena Binaria: ")
+						#~ Hex = Bin_Hex(Bin)
+						#~ print("\n\n\t Cadena en Hexadecimal: " + Hex + "\n")
+						
+					#~ except KeyboardInterrupt:			#~ Ctrl+C para volver
+						#~ print("\n\n\t Volviendo...")
+						#~ time.sleep(0.5)
+						#~ break
+						
+					#~ except:
+						#~ print("\n\n Tiene Caracteres No Válidos.")
+					pass
+					
+			elif Opc == "3":
+				os.system("cls")
+				#~ Binario a Decimal:
+
+				while True:
+
+					try:
+						Bin = input("\n\n\t Cadena Binaria: ")
+						Dec = Bin_Dec(Bin)
+						print("\n\n\t Cadena en Decimal: " + Dec + "\n")
+						
+					except KeyboardInterrupt:			#~ Ctrl+C para volver
+						print("\n\n\t Volviendo...")
+						time.sleep(0.5)
+						break
+						
+					except:
+						print("\n\n Tiene Caracteres No Válidos.")
+			
+			else:
+				print("\n\n\t\t Opción no válida...")
+				time.sleep(0.5)
+				
+		except KeyboardInterrupt:			#~ Ctrl+C para volver
+			print("\n\n\t Volviendo...")
+			time.sleep(0.5)
+			break
+			
+
+
 #=============================================================================
 #================================= Menú Ascii ================================
 #=============================================================================
