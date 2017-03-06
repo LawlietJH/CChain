@@ -29,7 +29,7 @@ __Para poder volver a algún Menú se debe precionar:__  ___Ctrl + C___
   * Ascii a Decimal. [\[Código Fuente\]](https://github.com/LawlietJH/CChain/blob/master/CChain.py#L144)
   
 2. Hexadecimal.
-  * Hexadecimal a Ascii.
+  * Hexadecimal a Ascii. [\[Código Fuente\]](https://github.com/LawlietJH/CChain/blob/master/CChain.py#L28)
   * Hexadecimal a Binario.
   * Hexadecimal a Decimal.
   
