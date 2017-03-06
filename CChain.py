@@ -8,13 +8,13 @@
 #                ╚██████╗╚██████╗██║  ██║██║  ██║██║██║ ╚████║
 #                 ╚═════╝ ╚═════╝╚═╝  ╚═╝╚═╝  ╚═╝╚═╝╚═╝  ╚═══╝
 #                                                         By: LawlietJH
-#                                                              v1.1.4
+#                                                              v1.1.5
 
 import os
 import sys
 
 Autor = "LawlietJH"
-Version = "v1.1.4"
+Version = "v1.1.5"
 
 
 
@@ -159,46 +159,45 @@ def Asc_Dec(Ascii):	#~ Ascii a Decimal.
 #================================== Decimal ==================================
 #=============================================================================
 
-def Dec_Bin(Dec):
-	#~ Decimal a Hexadecimal.
+def Dec_Bin(Dec):	#~ Decimal a Hexadecimal.
 	
-	lista = []
-	lista2 = []
 	xD = ""
+	Lista = []
+	Lista2 = []
 	Binario = ""
 
 	#~ Se toma cada caracter hasta que encuentre un espacio
 	#~ y esta cadena se agrega a una lista para convertir posteriormente.
-	for num in Dec:
+	for Num in Dec:
 		
-		if num != " ":
-			xD = xD + num
-		
+		if Num != " ":
+			xD = xD + Num
 		else:
 			xD = bin(int(xD))
-			lista.append(xD[2:])
+			Lista.append(xD[2:])
 			xD = ""
 			
 	xD = bin(int(xD))
-	lista.append(xD[2:])
+	Lista.append(xD[2:])
 	
 	#~ Se Añaden los 0 Faltantes al Inicio.
-	for binario in lista:
-		xD = binario
+	for Bin in lista:
+		
+		xD = Bin
+		
 		while True:
+		
 			if len(xD) % 8 != 0:
 				xD = "0" + xD
+				
 			else: 
-				lista2.append(xD)
+				Lista2.append(xD)
 				break
 	
-	print("\n\n [+] Binario: \n\n >> ", end='')
+	for Bin in lista2:			#~ Se Añaden los Bytes a La Cadena.
+		Binario += Bin + " "
 	
-	for Dec in lista2:
-		print(Dec, end=' ')
-	
-	print("")
-
+	return Binario
 
 
 #=============================================================================
@@ -214,8 +213,10 @@ def Bin_Dec(Bin):
 	xD = ""
 	
 	for num in Bin:
+		
 		if num != " ":
 			xD = xD + num
+			
 		else:
 			xD = int(xD, 2)
 			lista.append(xD)
