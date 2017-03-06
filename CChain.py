@@ -8,13 +8,13 @@
 #                ╚██████╗╚██████╗██║  ██║██║  ██║██║██║ ╚████║
 #                 ╚═════╝ ╚═════╝╚═╝  ╚═╝╚═╝  ╚═╝╚═╝╚═╝  ╚═══╝
 #                                                         By: LawlietJH
-#                                                              v1.1.2
+#                                                              v1.1.3
 
 import os
 import sys
 
 Autor = "LawlietJH"
-Version = "v1.1.2"
+Version = "v1.1.3"
 
 
 
@@ -167,6 +167,31 @@ def Asc_Dec(Ascii):	#~ Ascii a Decimal.
 
 
 
+def Bin_Dec(Bin):
+	#~ Binario a Decimal
+	
+	lista = []
+	xD = ""
+	
+	for num in Bin:
+		if num != " ":
+			xD = xD + num
+		else:
+			xD = int(xD, 2)
+			lista.append(xD)
+			xD = ""
+	xD = int(xD, 2)
+	lista.append(xD)
+	
+	print("\n\n [+] Decimal >> ", end='')
+	
+	for Dec in lista:
+		print(Dec, end=' ')
+	
+	print("\n\n")
+
+
+
 #=============================================================================
 #==================================== x=D ====================================
 #=============================================================================
@@ -175,8 +200,8 @@ def Asc_Dec(Ascii):	#~ Ascii a Decimal.
 Hex = "68 6f 6c 61"
 Asc = "hola"
 Dec = "104 111 108 97"
-Bin = "01101000 01101111 01101100 01100001"
-
-
-Dec = Asc_Dec(Asc)
-print("\n\n [*] Ascii: \n\n >> " + Asc + "\n\n\n --> Convertido <--\n\n\n [+] Decimal: \n\n >> " + Dec)
+#~ Bin = "01101000 01101111 01101100 01100001"
+while True:
+	Bin = input(" [+] Binario: ")
+	Dec = Bin_Dec(Bin)
+#~ print("\n\n [*] Ascii: \n\n >> " + Asc + "\n\n\n --> Convertido <--\n\n\n [+] Decimal: \n\n >> " + Dec)
