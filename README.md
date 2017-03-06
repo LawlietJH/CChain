@@ -31,7 +31,7 @@ __Para poder volver a algún Menú se debe precionar:__  ___Ctrl + C___
 2. Hexadecimal.
   * Hexadecimal a Ascii. [\[Código Fuente\]](https://github.com/LawlietJH/CChain/blob/master/CChain.py#L28)
   * Hexadecimal a Binario. [\[Código Fuente\]](https://github.com/LawlietJH/CChain/blob/master/CChain.py#L38)
-  * Hexadecimal a Decimal.
+  * Hexadecimal a Decimal. [\[Código Fuente\]](https://github.com/LawlietJH/CChain/blob/master/CChain.py#L62)
   
 3. Binario.
   * Binario a Hexadecimal.
