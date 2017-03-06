@@ -284,7 +284,23 @@ def main():
 							print("\n\n Tiene Caracteres No Válidos.")
 				
 				elif Opc == "2":
-					pass
+					os.system("cls")
+					#~ Ascii a Binario:
+
+					while True:
+
+						try:
+							Asc = input("\n\n\t Cadena Ascii: ")
+							Bin = Asc_Bin(Asc)
+							print("\n\n\t Cadena en Binario: " + Bin + "\n")
+							
+						except KeyboardInterrupt:			#~ Ctrl+C para volver
+							print("\n\n\t Volviendo...")
+							time.sleep(0.5)
+							break
+							
+						except:
+							print("\n\n Tiene Caracteres No Válidos.")
 				
 				elif Opc == "3":
 					pass
