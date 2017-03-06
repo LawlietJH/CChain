@@ -8,13 +8,13 @@
 #                ╚██████╗╚██████╗██║  ██║██║  ██║██║██║ ╚████║
 #                 ╚═════╝ ╚═════╝╚═╝  ╚═╝╚═╝  ╚═╝╚═╝╚═╝  ╚═══╝
 #                                                         By: LawlietJH
-#                                                              v1.1.5
+#                                                              v1.1.6
 
 import os
 import sys
 
 Autor = "LawlietJH"
-Version = "v1.1.5"
+Version = "v1.1.6"
 
 
 
@@ -159,7 +159,9 @@ def Asc_Dec(Ascii):	#~ Ascii a Decimal.
 #================================== Decimal ==================================
 #=============================================================================
 
-def Dec_Bin(Dec):	#~ Decimal a Hexadecimal.
+
+
+def Dec_Bin(Dec):	#~ Decimal a Binario.
 	
 	xD = ""
 	Lista = []
@@ -181,7 +183,7 @@ def Dec_Bin(Dec):	#~ Decimal a Hexadecimal.
 	Lista.append(xD[2:])
 	
 	#~ Se Añaden los 0 Faltantes al Inicio.
-	for Bin in lista:
+	for Bin in Lista:
 		
 		xD = Bin
 		
@@ -194,10 +196,11 @@ def Dec_Bin(Dec):	#~ Decimal a Hexadecimal.
 				Lista2.append(xD)
 				break
 	
-	for Bin in lista2:			#~ Se Añaden los Bytes a La Cadena.
+	for Bin in Lista2:			#~ Se Añaden los Bytes a La Cadena.
 		Binario += Bin + " "
 	
 	return Binario
+
 
 
 #=============================================================================
@@ -206,30 +209,30 @@ def Dec_Bin(Dec):	#~ Decimal a Hexadecimal.
 
 
 
-def Bin_Dec(Bin):
-	#~ Binario a Decimal
+def Bin_Dec(Bin):	#~ Binario a Decimal
 	
-	lista = []
 	xD = ""
+	Lista = []
+	Decimal = ""
 	
-	for num in Bin:
+	#~ Se toma cada Byte y se Almacena en Lista para su Posterior conversión.
+	for Num in Bin:
 		
-		if num != " ":
-			xD = xD + num
+		if Num != " ":
+			xD = xD + Num
 			
 		else:
 			xD = int(xD, 2)
-			lista.append(xD)
+			Lista.append(xD)
 			xD = ""
+	
 	xD = int(xD, 2)
-	lista.append(xD)
+	Lista.append(xD)
 	
-	print("\n\n [+] Decimal >> ", end='')
+	for Dec in Lista:			#~ Se Añade Cada Número a la Cadena.
+		Decimal += str(Dec) + " "
 	
-	for Dec in lista:
-		print(Dec, end=' ')
-	
-	print("\n\n")
+	return Decimal
 
 
 
