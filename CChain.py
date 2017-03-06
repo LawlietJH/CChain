@@ -8,14 +8,14 @@
 #                ╚██████╗╚██████╗██║  ██║██║  ██║██║██║ ╚████║
 #                 ╚═════╝ ╚═════╝╚═╝  ╚═╝╚═╝  ╚═╝╚═╝╚═╝  ╚═══╝
 #                                                         By: LawlietJH
-#                                                              v1.1.9
+#                                                              v1.2.0
 
 import time
 import sys
 import os
 
 Autor = "LawlietJH"
-Version = "v1.1.9"
+Version = "v1.2.0"
 
 
 
@@ -410,7 +410,7 @@ def Hex_Menu():
 
 
 #=============================================================================
-#================================== Menú Asc =================================
+#================================== Menú Bin =================================
 #=============================================================================
 
 
@@ -497,8 +497,96 @@ def Bin_Menu():
 
 
 #=============================================================================
-#================================= Menú Ascii ================================
+#================================== Menú Dec =================================
 #=============================================================================
+
+
+
+def Dec_Menu():
+	
+	while True:
+		
+		try:
+			os.system("cls")
+			#~ print("\n\n\t\t 1 - Decimal a Ascii.")
+			#~ print("\n\t\t 2 - Decimal a Hexadecimal.")
+			print("\n\t\t 3 - Decimal a Binario.")
+			Opc = input("\n\n\t Opción: ")
+			
+			if Opc == "1":
+				#~ os.system("cls")
+				#~ Decimal a Ascii:
+
+				#~ while True:
+
+					#~ try:
+						#~ Dec = input("\n\n\t Cadena Decimal: ")
+						#~ Asc = Dec_Asc(Dec)
+						#~ print("\n\n\t Cadena en Ascii: " + Asc + "\n")
+						
+					#~ except KeyboardInterrupt:			#~ Ctrl+C para volver
+						#~ print("\n\n\t Volviendo...")
+						#~ time.sleep(0.5)
+						#~ break
+						
+					#~ except:
+						#~ print("\n\n Tiene Caracteres No Válidos.")
+				pass
+								
+			elif Opc == "2":
+				#~ os.system("cls")
+				#~ Decimal a Hexadecimal:
+
+				#~ while True:
+
+					#~ try:
+						#~ Dec = input("\n\n\t Cadena Decimal: ")
+						#~ Hex = Dec_Hex(Dec)
+						#~ print("\n\n\t Cadena en Hexadecimal: " + Hex + "\n")
+						
+					#~ except KeyboardInterrupt:			#~ Ctrl+C para volver
+						#~ print("\n\n\t Volviendo...")
+						#~ time.sleep(0.5)
+						#~ break
+						
+					#~ except:
+						#~ print("\n\n Tiene Caracteres No Válidos.")
+				pass
+					
+			elif Opc == "3":
+				os.system("cls")
+				#~ Binario a Decimal:
+
+				while True:
+
+					try:
+						Dec = input("\n\n\t Cadena Decimal: ")
+						Bin = Dec_Bin(Dec)
+						print("\n\n\t Cadena en Binario: " + Bin + "\n")
+						
+					except KeyboardInterrupt:			#~ Ctrl+C para volver
+						print("\n\n\t Volviendo...")
+						time.sleep(0.5)
+						break
+						
+					except:
+						print("\n\n Tiene Caracteres No Válidos.")
+			
+			else:
+				print("\n\n\t\t Opción no válida...")
+				time.sleep(0.5)
+				
+		except KeyboardInterrupt:			#~ Ctrl+C para volver
+			print("\n\n\t Volviendo...")
+			time.sleep(0.5)
+			break
+			
+
+
+#=============================================================================
+#=============================== Menú Principal ==============================
+#=============================================================================
+
 
 
 def main():
@@ -518,13 +606,13 @@ def main():
 				Asc_Menu()
 			
 			elif Opc == "2":
-				pass
+				Hex_Menu()
 				
 			elif Opc == "3":
-				pass
+				Bin_Menu()
 				
 			elif Opc == "4":
-				pass
+				Dec_Menu()
 				
 			else:
 				print("\n\n\t\t Opción no válida...")
@@ -536,12 +624,13 @@ def main():
 			exit(0)
 
 
-main()
-
-
 
 #=============================================================================
 #==================================== xD =====================================
 #=============================================================================
+
+
+
+main()
 
 
