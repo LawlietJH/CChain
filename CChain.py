@@ -249,14 +249,14 @@ def Asc_Menu():
 	while True:
 		
 		try:
-			os.system("cls")
+			os.system("cls && title Ascii Menú")
 			print("\n\n\t\t 1 - Ascii a Hexadecimal.")
 			print("\n\t\t 2 - Ascii a Binario.")
 			print("\n\t\t 3 - Ascii a Decimal.")
 			Opc = input("\n\n\t Opción: ")
 			
 			if Opc == "1":
-				os.system("cls")
+				os.system("cls && title De Ascii a Hexadecimal")
 				#~ Ascii a Hexadecimal:
 
 				while True:
@@ -275,7 +275,7 @@ def Asc_Menu():
 						print("\n\n Tiene Caracteres No Válidos.")
 			
 			elif Opc == "2":
-				os.system("cls")
+				os.system("cls && title De Ascii a Binario")
 				#~ Ascii a Binario:
 
 				while True:
@@ -294,7 +294,7 @@ def Asc_Menu():
 						print("\n\n Tiene Caracteres No Válidos.")
 			
 			elif Opc == "3":
-				os.system("cls")
+				os.system("cls && title De Ascii a Decimal")
 				#~ Ascii a Decimal:
 
 				while True:
@@ -335,14 +335,14 @@ def Hex_Menu():
 	while True:
 		
 		try:
-			os.system("cls")
+			os.system("cls && title Hexadecimal Menú")
 			print("\n\n\t\t 1 - Hexadecimal a Ascii.")
 			print("\n\t\t 2 - Hexadecimal a Binario.")
 			print("\n\t\t 3 - Hexadecimal a Decimal.")
 			Opc = input("\n\n\t Opción: ")
 			
 			if Opc == "1":
-				os.system("cls")
+				os.system("cls && title De Hexadecimal a Ascii")
 				#~ Hexadecimal a Ascii:
 
 				while True:
@@ -361,7 +361,7 @@ def Hex_Menu():
 						print("\n\n Tiene Caracteres No Válidos.")
 			
 			elif Opc == "2":
-				os.system("cls")
+				os.system("cls && title De Hexadecimal a Binario")
 				#~ Hexadecimal a Binario:
 
 				while True:
@@ -380,7 +380,7 @@ def Hex_Menu():
 						print("\n\n Tiene Caracteres No Válidos.")
 			
 			elif Opc == "3":
-				os.system("cls")
+				os.system("cls && title De Hexadecimal a Decimal")
 				#~ Hexadecimal a Decimal:
 
 				while True:
@@ -420,14 +420,14 @@ def Bin_Menu():
 	while True:
 		
 		try:
-			os.system("cls")
+			os.system("cls && title Binario Menú")
 			#~ print("\n\n\t\t 1 - Binario a Ascii.")
 			#~ print("\n\t\t 2 - Binario a Hexadecimal.")
 			print("\n\t\t 3 - Binario a Decimal.")
 			Opc = input("\n\n\t Opción: ")
 			
 			if Opc == "1":
-				#~ os.system("cls")
+				#~ os.system("cls && title De Binario a Ascii")
 				#~ Binario a Ascii:
 
 				#~ while True:
@@ -447,7 +447,7 @@ def Bin_Menu():
 					pass
 								
 			elif Opc == "2":
-				#~ os.system("cls")
+				#~ os.system("cls && title De Binario a Hexadecimal")
 				#~ Binario a Hexadecimal:
 
 				#~ while True:
@@ -467,7 +467,7 @@ def Bin_Menu():
 					pass
 					
 			elif Opc == "3":
-				os.system("cls")
+				os.system("cls && title De Binario a Decimal")
 				#~ Binario a Decimal:
 
 				while True:
@@ -507,14 +507,14 @@ def Dec_Menu():
 	while True:
 		
 		try:
-			os.system("cls")
+			os.system("cls && title Decimal Menú")
 			#~ print("\n\n\t\t 1 - Decimal a Ascii.")
 			#~ print("\n\t\t 2 - Decimal a Hexadecimal.")
 			print("\n\t\t 3 - Decimal a Binario.")
 			Opc = input("\n\n\t Opción: ")
 			
 			if Opc == "1":
-				#~ os.system("cls")
+				#~ os.system("cls && title De Decimal a Ascii")
 				#~ Decimal a Ascii:
 
 				#~ while True:
@@ -534,7 +534,7 @@ def Dec_Menu():
 				pass
 								
 			elif Opc == "2":
-				#~ os.system("cls")
+				#~ os.system("cls && title De Decimal a Hexadecimal")
 				#~ Decimal a Hexadecimal:
 
 				#~ while True:
@@ -554,7 +554,7 @@ def Dec_Menu():
 				pass
 					
 			elif Opc == "3":
-				os.system("cls")
+				os.system("cls && title De Decimal a Binario")
 				#~ Binario a Decimal:
 
 				while True:
@@ -594,7 +594,8 @@ def main():
 	while True:
 		
 		try:
-			os.system("cls")
+			os.system("cls && title CChain.py        \
+			by:  LawlietJH")
 			print("\n\n\t\t 1 - Ascii.")
 			print("\n\n\t\t 2 - Hexadecimal.")
 			print("\n\n\t\t 3 - Binario.")
