@@ -8,14 +8,14 @@
 #                ╚██████╗╚██████╗██║  ██║██║  ██║██║██║ ╚████║
 #                 ╚═════╝ ╚═════╝╚═╝  ╚═╝╚═╝  ╚═╝╚═╝╚═╝  ╚═══╝
 #                                                         By: LawlietJH
-#                                                              v1.1.7
+#                                                              v1.1.8
 
 import time
 import sys
 import os
 
 Autor = "LawlietJH"
-Version = "v1.1.7"
+Version = "v1.1.8"
 
 
 
@@ -244,6 +244,84 @@ def Bin_Dec(Bin):	#~ Binario a Decimal
 
 
 
+def Asc_Menu():
+	
+	while True:
+		
+		try:
+			os.system("cls")
+			print("\n\n\t\t 1 - Ascii a Hexadecimal.")
+			print("\n\t\t 2 - Ascii a Binario.")
+			print("\n\t\t 3 - Ascii a Decimal.")
+			Opc = input("\n\n\t Opción: ")
+			
+			if Opc == "1":
+				os.system("cls")
+				#~ Ascii a Hexadecimal:
+
+				while True:
+
+					try:
+						Asc = input("\n\n\t Cadena Ascii: ")
+						Hex = Asc_Hex(Asc)
+						print("\n\n\t Cadena en Hexadecimal: " + Hex + "\n")
+						
+					except KeyboardInterrupt:			#~ Ctrl+C para volver
+						print("\n\n\t Volviendo...")
+						time.sleep(0.5)
+						break
+						
+					except:
+						print("\n\n Tiene Caracteres No Válidos.")
+			
+			elif Opc == "2":
+				os.system("cls")
+				#~ Ascii a Binario:
+
+				while True:
+
+					try:
+						Asc = input("\n\n\t Cadena Ascii: ")
+						Bin = Asc_Bin(Asc)
+						print("\n\n\t Cadena en Binario: " + Bin + "\n")
+						
+					except KeyboardInterrupt:			#~ Ctrl+C para volver
+						print("\n\n\t Volviendo...")
+						time.sleep(0.5)
+						break
+						
+					except:
+						print("\n\n Tiene Caracteres No Válidos.")
+			
+			elif Opc == "3":
+				os.system("cls")
+				#~ Ascii a Binario:
+
+				while True:
+
+					try:
+						Asc = input("\n\n\t Cadena Ascii: ")
+						Dec = Asc_Dec(Asc)
+						print("\n\n\t Cadena en Decimal: " + Dec + "\n")
+						
+					except KeyboardInterrupt:			#~ Ctrl+C para volver
+						print("\n\n\t Volviendo...")
+						time.sleep(0.5)
+						break
+						
+					except:
+						print("\n\n Tiene Caracteres No Válidos.")
+			
+			else:
+				print("\n\n\t\t Opción no válida...")
+				time.sleep(0.5)
+				
+		except KeyboardInterrupt:			#~ Ctrl+C para volver
+			print("\n\n\t Volviendo...")
+			time.sleep(0.5)
+			break
+			
+
 
 def main():
 	
@@ -258,57 +336,8 @@ def main():
 			Opc = input("\n\n\t Opción: ")
 			
 			if Opc == "1":
-				os.system("cls")
-				print("\n\n\t\t 1 - Ascii a Hexadecimal.")
-				print("\n\t\t 2 - Ascii a Binario.")
-				print("\n\t\t 3 - Ascii a Decimal.")
-				Opc = input("\n\n\t Opción: ")
 				
-				if Opc == "1":
-					os.system("cls")
-					#~ Ascii a Hexadecimal:
-
-					while True:
-
-						try:
-							Asc = input("\n\n\t Cadena Ascii: ")
-							Hex = Asc_Hex(Asc)
-							print("\n\n\t Cadena en Hexadecimal: " + Hex + "\n")
-							
-						except KeyboardInterrupt:			#~ Ctrl+C para volver
-							print("\n\n\t Volviendo...")
-							time.sleep(0.5)
-							break
-							
-						except:
-							print("\n\n Tiene Caracteres No Válidos.")
-				
-				elif Opc == "2":
-					os.system("cls")
-					#~ Ascii a Binario:
-
-					while True:
-
-						try:
-							Asc = input("\n\n\t Cadena Ascii: ")
-							Bin = Asc_Bin(Asc)
-							print("\n\n\t Cadena en Binario: " + Bin + "\n")
-							
-						except KeyboardInterrupt:			#~ Ctrl+C para volver
-							print("\n\n\t Volviendo...")
-							time.sleep(0.5)
-							break
-							
-						except:
-							print("\n\n Tiene Caracteres No Válidos.")
-				
-				elif Opc == "3":
-					pass
-				
-				else:
-					print("\n\n\t\t Opción no válida...")
-					time.sleep(0.5)
-						
+				Asc_Menu()
 			
 			elif Opc == "2":
 				pass
