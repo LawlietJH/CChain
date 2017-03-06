@@ -8,13 +8,13 @@
 #                ╚██████╗╚██████╗██║  ██║██║  ██║██║██║ ╚████║
 #                 ╚═════╝ ╚═════╝╚═╝  ╚═╝╚═╝  ╚═╝╚═╝╚═╝  ╚═══╝
 #                                                         By: LawlietJH
-#                                                              v1.1.3
+#                                                              v1.1.4
 
 import os
 import sys
 
 Autor = "LawlietJH"
-Version = "v1.1.3"
+Version = "v1.1.4"
 
 
 
@@ -159,6 +159,46 @@ def Asc_Dec(Ascii):	#~ Ascii a Decimal.
 #================================== Decimal ==================================
 #=============================================================================
 
+def Dec_Bin(Dec):
+	#~ Decimal a Hexadecimal.
+	
+	lista = []
+	lista2 = []
+	xD = ""
+	Binario = ""
+
+	#~ Se toma cada caracter hasta que encuentre un espacio
+	#~ y esta cadena se agrega a una lista para convertir posteriormente.
+	for num in Dec:
+		
+		if num != " ":
+			xD = xD + num
+		
+		else:
+			xD = bin(int(xD))
+			lista.append(xD[2:])
+			xD = ""
+			
+	xD = bin(int(xD))
+	lista.append(xD[2:])
+	
+	#~ Se Añaden los 0 Faltantes al Inicio.
+	for binario in lista:
+		xD = binario
+		while True:
+			if len(xD) % 8 != 0:
+				xD = "0" + xD
+			else: 
+				lista2.append(xD)
+				break
+	
+	print("\n\n [+] Binario: \n\n >> ", end='')
+	
+	for Dec in lista2:
+		print(Dec, end=' ')
+	
+	print("")
+
 
 
 #=============================================================================
@@ -201,6 +241,7 @@ Hex = "68 6f 6c 61"
 Asc = "hola"
 Dec = "104 111 108 97"
 #~ Bin = "01101000 01101111 01101100 01100001"
+
 while True:
 	Bin = input(" [+] Binario: ")
 	Dec = Bin_Dec(Bin)
