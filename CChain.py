@@ -8,14 +8,14 @@
 #                ╚██████╗╚██████╗██║  ██║██║  ██║██║██║ ╚████║
 #                 ╚═════╝ ╚═════╝╚═╝  ╚═╝╚═╝  ╚═╝╚═╝╚═╝  ╚═══╝
 #                                                         By: LawlietJH
-#                                                              v1.2.0
+#                                                              v1.2.1
 
 import time
 import sys
 import os
 
 Autor = "LawlietJH"
-Version = "v1.2.0"
+Version = "v1.2.1"
 
 
 
@@ -159,6 +159,27 @@ def Asc_Dec(Ascii):	#~ Ascii a Decimal.
 #=============================================================================
 #================================== Decimal ==================================
 #=============================================================================
+
+
+
+def Dec_Asc(Dec):	#~ Decimal a Ascii.
+		
+	lista = []
+	xD = ""
+	
+	for num in Dec:
+		if num != " ":
+			xD = xD + num
+		else:
+			lista.append(chr(int(xD)))
+			xD = ""
+	lista.append(chr(int(xD)))
+			
+	print("\n\n [+] Decimal: \n\n >> ", end='')
+	for Ascii in lista:
+		print(Ascii, end='')	
+	
+	print("")
 
 
 
