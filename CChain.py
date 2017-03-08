@@ -8,14 +8,14 @@
 #                ╚██████╗╚██████╗██║  ██║██║  ██║██║██║ ╚████║
 #                 ╚═════╝ ╚═════╝╚═╝  ╚═╝╚═╝  ╚═╝╚═╝╚═╝  ╚═══╝
 #                                                         By: LawlietJH
-#                                                              v1.2.1
+#                                                              v1.2.2
 
 import time
 import sys
 import os
 
 Autor = "LawlietJH"
-Version = "v1.2.1"
+Version = "v1.2.2"
 
 
 
@@ -178,6 +178,32 @@ def Dec_Asc(Dec):	#~ Decimal a Ascii.
 	print("\n\n [+] Decimal: \n\n >> ", end='')
 	for Ascii in lista:
 		print(Ascii, end='')	
+	
+	print("")
+
+
+
+def Dec_Hex(Dec):	#~ Decimal a Hexadecimal.
+	
+	xD = ""
+	Cadena = ""
+	lista = []
+	
+	for Hex in Dec:
+		if Hex != " ":
+			xD = xD + Hex
+		else:
+			xD = hex(int(xD)).split('x')[1]
+			lista.append(xD)
+			xD = ""
+	
+	xD = hex(int(xD)).split('x')[1]
+	lista.append(xD)
+	
+	print("\n\n [+] Hexadecimal: \n\n >> ", end='')
+	
+	for Hexa in lista:
+		print(Hexa,end=' ')
 	
 	print("")
 
