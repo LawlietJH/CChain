@@ -8,14 +8,80 @@
 #                ╚██████╗╚██████╗██║  ██║██║  ██║██║██║ ╚████║
 #                 ╚═════╝ ╚═════╝╚═╝  ╚═╝╚═╝  ╚═╝╚═╝╚═╝  ╚═══╝
 #                                                         By: LawlietJH
-#                                                              v1.2.2
+#                                                              v1.2.3
 
 import time
 import sys
 import os
 
 Autor = "LawlietJH"
-Version = "v1.2.2"
+Version = "v1.2.3"
+
+
+
+#=============================================================================
+#=================================== Ascii ===================================
+#=============================================================================
+
+
+
+def Asc_Hex(Ascii):	#~ Ascii a Hexadecimal.
+	
+	cont = 0
+	Hexadecimal = ""
+	
+	Hex = ''.join((hex(ord(c))[2:] for c in Ascii))
+	
+	#~ Se Separa la Cadena con un Espacio en Cada Byte.
+	for x in Hex:
+		
+		cont += 1
+		
+		if cont % 2 != 0:
+			Hexadecimal += x
+					
+		else:
+			Hexadecimal += x + " "
+			
+	return Hexadecimal
+
+
+
+def Asc_Bin(Ascii):	#~ Ascii a Binario.
+	
+	cont = 0
+	Binario = ""
+
+	Bin = ''.join((bin(ord(c))[2:].zfill(8) for c in Ascii))
+	
+	#~ Se Separa la Cadena con un Espacio en Cada Byte.
+	for b in Bin:
+		
+		cont += 1
+		
+		if(cont <= 7):
+			Binario = Binario + b
+		
+		else:
+			Binario = Binario + b + " "
+			cont = 0
+	
+	return Binario
+
+
+
+def Asc_Dec(Ascii):	#~ Ascii a Decimal.
+	
+	Lista = []
+	Decimal = ""
+	
+	for Letra in Ascii:				#~ Se Añaden los Caracteres a la Lista
+		Lista.append(ord(Letra))	#~ Convertidos en su Respectivo Decimal.  
+	
+	for Dec in Lista:				#~ Se Añaden los Números a la Cadena.
+		Decimal += str(Dec) + " "
+	
+	return Decimal
 
 
 
@@ -85,72 +151,6 @@ def Hex_Dec(Hex):	#~ Hexadecimal a Decimal.
 	
 	for Dec in Lista:	#~ Se Añade Cada Número a la Cadena. 
 		Decimal += Dec
-	
-	return Decimal
-
-
-
-#=============================================================================
-#=================================== Ascii ===================================
-#=============================================================================
-
-
-
-def Asc_Hex(Ascii):	#~ Ascii a Hexadecimal.
-	
-	cont = 0
-	Hexadecimal = ""
-	
-	Hex = ''.join((hex(ord(c))[2:] for c in Ascii))
-	
-	#~ Se Separa la Cadena con un Espacio en Cada Byte.
-	for x in Hex:
-		
-		cont += 1
-		
-		if cont % 2 != 0:
-			Hexadecimal += x
-					
-		else:
-			Hexadecimal += x + " "
-			
-	return Hexadecimal
-
-
-
-def Asc_Bin(Ascii):	#~ Ascii a Binario.
-	
-	cont = 0
-	Binario = ""
-
-	Bin = ''.join((bin(ord(c))[2:].zfill(8) for c in Ascii))
-	
-	#~ Se Separa la Cadena con un Espacio en Cada Byte.
-	for b in Bin:
-		
-		cont += 1
-		
-		if(cont <= 7):
-			Binario = Binario + b
-		
-		else:
-			Binario = Binario + b + " "
-			cont = 0
-	
-	return Binario
-
-
-
-def Asc_Dec(Ascii):	#~ Ascii a Decimal.
-	
-	Lista = []
-	Decimal = ""
-	
-	for Letra in Ascii:				#~ Se Añaden los Caracteres a la Lista
-		Lista.append(ord(Letra))	#~ Convertidos en su Respectivo Decimal.  
-	
-	for Dec in Lista:				#~ Se Añaden los Números a la Cadena.
-		Decimal += str(Dec) + " "
 	
 	return Decimal
 
@@ -257,6 +257,22 @@ def Dec_Bin(Dec):	#~ Decimal a Binario.
 
 
 
+
+def Bin_Asc(Bin):	#~ Binario a Ascii
+
+	Bin = Bin.replace(" ", "")
+
+	Ascii = ''.join((chr(int(Bin[i:i+8], 2)) for i in range(0, len(Bin), 8)))
+	
+	print("\n\n [+] Ascii: \n\n >> "+Ascii, end='')
+	
+	print("")
+
+
+
+
+
+
 def Bin_Dec(Bin):	#~ Binario a Decimal
 	
 	xD = ""
@@ -281,7 +297,6 @@ def Bin_Dec(Bin):	#~ Binario a Decimal
 		Decimal += str(Dec) + " "
 	
 	return Decimal
-
 
 
 
