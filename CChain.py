@@ -257,26 +257,27 @@ def Dec_Asc(Dec):	#~ Decimal a Ascii.
 def Dec_Hex(Dec):	#~ Decimal a Hexadecimal.
 	
 	xD = ""
-	Cadena = ""
-	lista = []
+	Lista = []
+	Hexadecimal = ""
 	
 	for Hex in Dec:
+		
 		if Hex != " ":
 			xD = xD + Hex
+		
 		else:
 			xD = hex(int(xD)).split('x')[1]
-			lista.append(xD)
+			Lista.append(xD)
 			xD = ""
 	
 	xD = hex(int(xD)).split('x')[1]
-	lista.append(xD)
+	Lista.append(xD)
 	
-	print("\n\n [+] Hexadecimal: \n\n >> ", end='')
+	for Hexa in Lista:
+		
+		Hexadecimal += Hexa
 	
-	for Hexa in lista:
-		print(Hexa,end=' ')
-	
-	print("")
+	return Hexadecimal
 
 
 
