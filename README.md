@@ -39,7 +39,7 @@ __Para poder volver a algún Menú se debe precionar:__  ___Ctrl + C___
   * Binario a Decimal. [\[Código Fuente\]](https://github.com/LawlietJH/CChain/blob/master/CChain.py#L207)
   
 4. Decimal.
+  * Decimal a Ascii. [\[Código Fuente\]](https://github.com/LawlietJH/CChain/blob/master/CChain.py#L240)
   * Decimal a Hexadecimal.
-  * Decimal a Ascii.
   * Decimal a Binario.
   
