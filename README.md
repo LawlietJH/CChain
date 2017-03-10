@@ -13,7 +13,7 @@
                             ║  ├─┤││││  │├┤  │ ║╠═╣
                             ╩═╝┴ ┴└┴┘┴─┘┴└─┘ ┴╚╝╩ ╩
                  
-                                     v1.3.0
+                                     v1.3.1
 
 - - -
 
@@ -42,4 +42,5 @@ __Para poder volver a algún Menú se debe precionar:__  ___Ctrl + C___
   * Decimal a Ascii. [\[Código Fuente\]](https://github.com/LawlietJH/CChain/blob/master/CChain.py#L240)
   * Decimal a Hexadecimal. [\[Código Fuente\]](https://github.com/LawlietJH/CChain/blob/master/CChain.py#L265)
   * Decimal a Binario. [\[Código Fuente\]](https://github.com/LawlietJH/CChain/blob/master/CChain.py#L294)
+  * Decimal a Octal. [\[Código Fuente\]](https://github.com/LawlietJH/CChain/blob/master/CChain.py#L336)
   
