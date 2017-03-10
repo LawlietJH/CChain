@@ -8,14 +8,14 @@
 #                ╚██████╗╚██████╗██║  ██║██║  ██║██║██║ ╚████║
 #                 ╚═════╝ ╚═════╝╚═╝  ╚═╝╚═╝  ╚═╝╚═╝╚═╝  ╚═══╝
 #                                                         By: LawlietJH
-#                                                              v1.3.2
+#                                                              v1.3.3
 
 import time
 import sys
 import os
 
 Autor = "LawlietJH"
-Version = "v1.3.2"
+Version = "v1.3.3"
 
 
 
@@ -228,6 +228,18 @@ def Bin_Dec(Bin):	#~ Binario a Decimal
 		Decimal += str(Dec) + " "
 	
 	return Decimal
+
+
+
+def Bin_Oct(Bin):
+	
+	Oct = int(Bin, 2)
+	Oct = oct(Oct)
+	Oct = str(Oct)
+	Oct = Oct[2:]
+	
+	return Oct
+
 
 
 
@@ -544,6 +556,7 @@ def Bin_Menu():
 			print("\n\n\t\t 1 - Binario a Ascii.")
 			print("\n\t\t 2 - Binario a Hexadecimal.")
 			print("\n\t\t 3 - Binario a Decimal.")
+			print("\n\t\t 4 - Binario a Octal.")
 			Opc = input("\n\n\t Opción: ")
 			
 			if Opc == "1":
@@ -594,6 +607,25 @@ def Bin_Menu():
 						Bin = input("\n\n\t Cadena Binaria: ")
 						Dec = Bin_Dec(Bin)
 						print("\n\t Cadena en Decimal: " + Dec + "\n\n")
+						
+					except KeyboardInterrupt:			#~ Ctrl+C para volver
+						print("\n\n\t Volviendo...")
+						time.sleep(0.5)
+						break
+						
+					except:
+						print("\n\n Tiene Caracteres No Válidos.")
+			
+			elif Opc == "4":
+				os.system("cls && title De Binario a Octal")
+				#~ Binario a Octal:
+
+				while True:
+
+					try:
+						Bin = input("\n\n\t Cadena Binaria: ")
+						Oct = Bin_Oct(Bin)
+						print("\n\t Cadena en Octal: " + Oct + "\n\n")
 						
 					except KeyboardInterrupt:			#~ Ctrl+C para volver
 						print("\n\n\t Volviendo...")
@@ -691,7 +723,7 @@ def Dec_Menu():
 			
 			elif Opc == "4":
 				os.system("cls && title De Decimal a Octal")
-				#~ Binario a Decimal:
+				#~ Decimal a Octal:
 
 				while True:
 
@@ -726,6 +758,7 @@ def Dec_Menu():
 
 
 def Oct_Menu():
+	
 	while True:
 		
 		try:
@@ -735,7 +768,7 @@ def Oct_Menu():
 			
 			if Opc == "1":
 				os.system("cls && title De Octal a Decimal")
-				#~ Binario a Ascii:
+				#~ Octal a Decimal:
 
 				while True:
 
