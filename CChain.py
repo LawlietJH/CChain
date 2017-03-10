@@ -8,14 +8,14 @@
 #                ╚██████╗╚██████╗██║  ██║██║  ██║██║██║ ╚████║
 #                 ╚═════╝ ╚═════╝╚═╝  ╚═╝╚═╝  ╚═╝╚═╝╚═╝  ╚═══╝
 #                                                         By: LawlietJH
-#                                                              v1.2.3
+#                                                              v1.2.4
 
 import time
 import sys
 import os
 
 Autor = "LawlietJH"
-Version = "v1.2.3"
+Version = "v1.2.4"
 
 
 
@@ -270,6 +270,22 @@ def Bin_Asc(Bin):	#~ Binario a Ascii
 
 
 
+def Bin_Hex(Bin):	#~ Binario a Hexadecimal
+	
+	cont = 0
+	Bin = Bin.replace(" ", "")
+
+	Hex = ''.join((hex(int(Bin[i:i+8], 2))[2:] for i in range(0, len(Bin), 8)))
+	
+	print("\n\n [+] Hexadecimal: \n\n >> ", end='')
+	for x in Hex:
+		cont += 1
+		if cont % 2 != 0:
+			print(x, end='')
+		else:
+			print(x, end=' ')
+	
+	print("")
 
 
 
