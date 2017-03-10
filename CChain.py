@@ -506,30 +506,29 @@ def Bin_Menu():
 		
 		try:
 			os.system("cls && title Binario Menú")
-			#~ print("\n\n\t\t 1 - Binario a Ascii.")
-			#~ print("\n\t\t 2 - Binario a Hexadecimal.")
+			print("\n\n\t\t 1 - Binario a Ascii.")
+			print("\n\t\t 2 - Binario a Hexadecimal.")
 			print("\n\t\t 3 - Binario a Decimal.")
 			Opc = input("\n\n\t Opción: ")
 			
 			if Opc == "1":
-				#~ os.system("cls && title De Binario a Ascii")
-				#~ Binario a Ascii:
+				os.system("cls && title De Binario a Ascii")
+				Binario a Ascii:
 
-				#~ while True:
+				while True:
 
-					#~ try:
-						#~ Bin = input("\n\n\t Cadena Binaria: ")
-						#~ Asc = Bin_Asc(Bin)
-						#~ print("\n\n\t Cadena en Ascii: " + Asc + "\n")
+					try:
+						Bin = input("\n\n\t Cadena Binaria: ")
+						Asc = Bin_Asc(Bin)
+						print("\n\n\t Cadena en Ascii: " + Asc + "\n")
 						
-					#~ except KeyboardInterrupt:			#~ Ctrl+C para volver
-						#~ print("\n\n\t Volviendo...")
-						#~ time.sleep(0.5)
-						#~ break
+					except KeyboardInterrupt:			#~ Ctrl+C para volver
+						print("\n\n\t Volviendo...")
+						time.sleep(0.5)
+						break
 						
-					#~ except:
-						#~ print("\n\n Tiene Caracteres No Válidos.")
-					pass
+					except:
+						print("\n\n Tiene Caracteres No Válidos.")
 								
 			elif Opc == "2":
 				#~ os.system("cls && title De Binario a Hexadecimal")
