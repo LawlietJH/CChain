@@ -8,14 +8,14 @@
 #                ╚██████╗╚██████╗██║  ██║██║  ██║██║██║ ╚████║
 #                 ╚═════╝ ╚═════╝╚═╝  ╚═╝╚═╝  ╚═╝╚═╝╚═╝  ╚═══╝
 #                                                         By: LawlietJH
-#                                                              v1.3.3
+#                                                              v1.3.4
 
 import time
 import sys
 import os
 
 Autor = "LawlietJH"
-Version = "v1.3.3"
+Version = "v1.3.4"
 
 
 
@@ -359,6 +359,16 @@ def Dec_Oct(Dec):	#~ Decimal a Octal.
 #=============================================================================
 #==================================== Octal ==================================
 #=============================================================================
+
+
+
+def Oct_Bin(Oct):
+	
+	Binario = int(Oct, 8)
+	Binario = bin(Binario)
+	Binario = Binario[2:]
+	
+	return Binario
 
 
 
@@ -763,10 +773,30 @@ def Oct_Menu():
 		
 		try:
 			os.system("cls && title Octal Menú")
-			print("\n\n\t\t 1 - Octal a Decimal.")
+			print("\n\n\t\t 1 - Octal a Binario.")
+			print("\n\n\t\t 2 - Octal a Decimal.")
 			Opc = input("\n\n\t Opción: ")
 			
 			if Opc == "1":
+				os.system("cls && title De Octal a Binario")
+				#~ Octal a Binario:
+
+				while True:
+
+					try:
+						Oct = input("\n\n\t Cadena Octal: ")
+						Bin = Oct_Bin(Oct)
+						print("\n\t Cadena en Binario: " + Bin + "\n\n")
+						
+					except KeyboardInterrupt:			#~ Ctrl+C para volver
+						print("\n\n\t Volviendo...")
+						time.sleep(0.5)
+						break
+						
+					except:
+						print("\n\n Tiene Caracteres No Válidos.")
+								
+			elif Opc == "2":
 				os.system("cls && title De Octal a Decimal")
 				#~ Octal a Decimal:
 
