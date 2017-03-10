@@ -8,14 +8,14 @@
 #                ╚██████╗╚██████╗██║  ██║██║  ██║██║██║ ╚████║
 #                 ╚═════╝ ╚═════╝╚═╝  ╚═╝╚═╝  ╚═╝╚═╝╚═╝  ╚═══╝
 #                                                         By: LawlietJH
-#                                                              v1.2.8
+#                                                              v1.3.0
 
 import time
 import sys
 import os
 
 Autor = "LawlietJH"
-Version = "v1.2.8"
+Version = "v1.3.0"
 
 
 
@@ -42,7 +42,9 @@ def Asc_Hex(Ascii):	#~ Ascii a Hexadecimal.
 					
 		else:
 			Hexadecimal += x + " "
-			
+	
+	Hexadecimal = Hexadecimal.upper()
+	
 	return Hexadecimal
 
 
