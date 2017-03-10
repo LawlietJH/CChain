@@ -8,14 +8,14 @@
 #                ╚██████╗╚██████╗██║  ██║██║  ██║██║██║ ╚████║
 #                 ╚═════╝ ╚═════╝╚═╝  ╚═╝╚═╝  ╚═╝╚═╝╚═╝  ╚═══╝
 #                                                         By: LawlietJH
-#                                                              v1.2.7
+#                                                              v1.2.8
 
 import time
 import sys
 import os
 
 Autor = "LawlietJH"
-Version = "v1.2.7"
+Version = "v1.2.8"
 
 
 
@@ -531,24 +531,23 @@ def Bin_Menu():
 						print("\n\n Tiene Caracteres No Válidos.")
 								
 			elif Opc == "2":
-				#~ os.system("cls && title De Binario a Hexadecimal")
-				#~ Binario a Hexadecimal:
+				os.system("cls && title De Binario a Hexadecimal")
+				Binario a Hexadecimal:
 
-				#~ while True:
+				while True:
 
-					#~ try:
-						#~ Bin = input("\n\n\t Cadena Binaria: ")
-						#~ Hex = Bin_Hex(Bin)
-						#~ print("\n\n\t Cadena en Hexadecimal: " + Hex + "\n")
+					try:
+						Bin = input("\n\n\t Cadena Binaria: ")
+						Hex = Bin_Hex(Bin)
+						print("\n\n\t Cadena en Hexadecimal: " + Hex + "\n")
 						
-					#~ except KeyboardInterrupt:			#~ Ctrl+C para volver
-						#~ print("\n\n\t Volviendo...")
-						#~ time.sleep(0.5)
-						#~ break
+					except KeyboardInterrupt:			#~ Ctrl+C para volver
+						print("\n\n\t Volviendo...")
+						time.sleep(0.5)
+						break
 						
-					#~ except:
-						#~ print("\n\n Tiene Caracteres No Válidos.")
-					pass
+					except:
+						print("\n\n Tiene Caracteres No Válidos.")
 					
 			elif Opc == "3":
 				os.system("cls && title De Binario a Decimal")
