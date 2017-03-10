@@ -277,6 +277,8 @@ def Dec_Hex(Dec):	#~ Decimal a Hexadecimal.
 		
 		Hexadecimal += Hexa
 	
+	Hexadecimal = Hexadecimal.upper()
+	
 	return Hexadecimal
 
 
@@ -513,7 +515,7 @@ def Bin_Menu():
 			
 			if Opc == "1":
 				os.system("cls && title De Binario a Ascii")
-				Binario a Ascii:
+				#~ Binario a Ascii:
 
 				while True:
 
@@ -532,7 +534,7 @@ def Bin_Menu():
 								
 			elif Opc == "2":
 				os.system("cls && title De Binario a Hexadecimal")
-				Binario a Hexadecimal:
+				#~ Binario a Hexadecimal:
 
 				while True:
 
@@ -598,7 +600,7 @@ def Dec_Menu():
 			
 			if Opc == "1":
 				os.system("cls && title De Decimal a Ascii")
-				Decimal a Ascii:
+				#~ Decimal a Ascii:
 
 				while True:
 
@@ -617,7 +619,7 @@ def Dec_Menu():
 								
 			elif Opc == "2":
 				os.system("cls && title De Decimal a Hexadecimal")
-				Decimal a Hexadecimal:
+				#~ Decimal a Hexadecimal:
 
 				while True:
 
