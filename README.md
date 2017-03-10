@@ -41,5 +41,5 @@ __Para poder volver a algún Menú se debe precionar:__  ___Ctrl + C___
 4. Decimal.
   * Decimal a Ascii. [\[Código Fuente\]](https://github.com/LawlietJH/CChain/blob/master/CChain.py#L240)
   * Decimal a Hexadecimal. [\[Código Fuente\]](https://github.com/LawlietJH/CChain/blob/master/CChain.py#L265)
-  * Decimal a Binario.
+  * Decimal a Binario. [\[Código Fuente\]](https://github.com/LawlietJH/CChain/blob/master/CChain.py#L294)
   
