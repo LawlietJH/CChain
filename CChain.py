@@ -175,22 +175,28 @@ def Bin_Asc(Bin):	#~ Binario a Ascii
 
 def Bin_Hex(Bin):	#~ Binario a Hexadecimal
 	
-	cont = 0
+	xD = ""
+	Lista = []
 	Hexadecimal = ""
-	Bin = Bin.replace(" ", "")	#~ Remplaza Los espacios por Cadena Vacia.
-
-	Hex = ''.join((hex(int(Bin[i:i+8], 2))[2:] for i in range(0, len(Bin), 8)))
-	
-	#~ Se añaden los espacios correspondientes en la cadena Hexadecimal.
-	for x in Hex:
 		
-		cont += 1
+	for Hex in Bin:
 		
-		if cont % 2 != 0:
-			Hexadecimal += x
+		if Hex != " ":
+			xD = xD + Hex
 		
 		else:
-			Hexadecimal += x + " "
+			xD = "".join((hex(int(xD[i:i+8], 2))[2:] for i in range(0, len(xD), 8)))
+			Lista.append(xD+" ")
+			xD = ""
+	
+	xD = "".join((hex(int(xD[i:i+8], 2))[2:] for i in range(0, len(xD), 8)))
+	Lista.append(xD)
+	
+	for Hex in Lista:
+		
+		Hexadecimal += Hex
+	
+	Hexadecimal = Hexadecimal.upper()
 	
 	return Hexadecimal
 
