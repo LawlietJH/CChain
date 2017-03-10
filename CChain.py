@@ -616,24 +616,23 @@ def Dec_Menu():
 						print("\n\n Tiene Caracteres No Válidos.")
 								
 			elif Opc == "2":
-				#~ os.system("cls && title De Decimal a Hexadecimal")
-				#~ Decimal a Hexadecimal:
+				os.system("cls && title De Decimal a Hexadecimal")
+				Decimal a Hexadecimal:
 
-				#~ while True:
+				while True:
 
-					#~ try:
-						#~ Dec = input("\n\n\t Cadena Decimal: ")
-						#~ Hex = Dec_Hex(Dec)
-						#~ print("\n\n\t Cadena en Hexadecimal: " + Hex + "\n")
+					try:
+						Dec = input("\n\n\t Cadena Decimal: ")
+						Hex = Dec_Hex(Dec)
+						print("\n\n\t Cadena en Hexadecimal: " + Hex + "\n")
 						
-					#~ except KeyboardInterrupt:			#~ Ctrl+C para volver
-						#~ print("\n\n\t Volviendo...")
-						#~ time.sleep(0.5)
-						#~ break
+					except KeyboardInterrupt:			#~ Ctrl+C para volver
+						print("\n\n\t Volviendo...")
+						time.sleep(0.5)
+						break
 						
-					#~ except:
-						#~ print("\n\n Tiene Caracteres No Válidos.")
-				pass
+					except:
+						print("\n\n Tiene Caracteres No Válidos.")
 					
 			elif Opc == "3":
 				os.system("cls && title De Decimal a Binario")
