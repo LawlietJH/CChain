@@ -8,14 +8,14 @@
 #                ╚██████╗╚██████╗██║  ██║██║  ██║██║██║ ╚████║
 #                 ╚═════╝ ╚═════╝╚═╝  ╚═╝╚═╝  ╚═╝╚═╝╚═╝  ╚═══╝
 #                                                         By: LawlietJH
-#                                                              v1.2.5
+#                                                              v1.2.6
 
 import time
 import sys
 import os
 
 Autor = "LawlietJH"
-Version = "v1.2.5"
+Version = "v1.2.6"
 
 
 
@@ -176,19 +176,20 @@ def Bin_Asc(Bin):	#~ Binario a Ascii
 def Bin_Hex(Bin):	#~ Binario a Hexadecimal
 	
 	cont = 0
-	Bin = Bin.replace(" ", "")
+	Hexadecimal = ""
+	Bin = Bin.replace(" ", "")	#~ Remplaza Los espacios por Cadena Vacia.
 
 	Hex = ''.join((hex(int(Bin[i:i+8], 2))[2:] for i in range(0, len(Bin), 8)))
 	
-	print("\n\n [+] Hexadecimal: \n\n >> ", end='')
+	#~ Se añaden los espacios correspondientes en la cadena Hexadecimal.
 	for x in Hex:
 		cont += 1
 		if cont % 2 != 0:
-			print(x, end='')
+			Hexadecimal += x
 		else:
-			print(x, end=' ')
+			Hexadecimal += x + " "
 	
-	print("")
+	return Hexadecimal
 
 
 
