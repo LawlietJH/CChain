@@ -591,30 +591,29 @@ def Dec_Menu():
 		
 		try:
 			os.system("cls && title Decimal Menú")
-			#~ print("\n\n\t\t 1 - Decimal a Ascii.")
-			#~ print("\n\t\t 2 - Decimal a Hexadecimal.")
+			print("\n\n\t\t 1 - Decimal a Ascii.")
+			print("\n\t\t 2 - Decimal a Hexadecimal.")
 			print("\n\t\t 3 - Decimal a Binario.")
 			Opc = input("\n\n\t Opción: ")
 			
 			if Opc == "1":
-				#~ os.system("cls && title De Decimal a Ascii")
-				#~ Decimal a Ascii:
+				os.system("cls && title De Decimal a Ascii")
+				Decimal a Ascii:
 
-				#~ while True:
+				while True:
 
-					#~ try:
-						#~ Dec = input("\n\n\t Cadena Decimal: ")
-						#~ Asc = Dec_Asc(Dec)
-						#~ print("\n\n\t Cadena en Ascii: " + Asc + "\n")
+					try:
+						Dec = input("\n\n\t Cadena Decimal: ")
+						Asc = Dec_Asc(Dec)
+						print("\n\n\t Cadena en Ascii: " + Asc + "\n")
 						
-					#~ except KeyboardInterrupt:			#~ Ctrl+C para volver
-						#~ print("\n\n\t Volviendo...")
-						#~ time.sleep(0.5)
-						#~ break
+					except KeyboardInterrupt:			#~ Ctrl+C para volver
+						print("\n\n\t Volviendo...")
+						time.sleep(0.5)
+						break
 						
-					#~ except:
-						#~ print("\n\n Tiene Caracteres No Válidos.")
-				pass
+					except:
+						print("\n\n Tiene Caracteres No Válidos.")
 								
 			elif Opc == "2":
 				#~ os.system("cls && title De Decimal a Hexadecimal")
