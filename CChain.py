@@ -267,7 +267,7 @@ def Dec_Hex(Dec):	#~ Decimal a Hexadecimal.
 		
 		else:
 			xD = hex(int(xD)).split('x')[1]
-			Lista.append(xD)
+			Lista.append(xD+" ")
 			xD = ""
 	
 	xD = hex(int(xD)).split('x')[1]
