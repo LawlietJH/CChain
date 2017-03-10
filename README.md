@@ -23,7 +23,7 @@ __Para poder volver a algún Menú se debe precionar:__  ___Ctrl + C___
 
 ### Menús:
 
-1. Ascii.
+1. Ascii. [\[Menú\]](https://github.com/LawlietJH/CChain/blob/master/CChain.py#L342)
   * Ascii a Hexadecimal. [\[Código Fuente\]](https://github.com/LawlietJH/CChain/blob/master/CChain.py#L28)
   * Ascii a Binario. [\[Código Fuente\]](https://github.com/LawlietJH/CChain/blob/master/CChain.py#L52)
   * Ascii a Decimal. [\[Código Fuente\]](https://github.com/LawlietJH/CChain/blob/master/CChain.py#L75)
