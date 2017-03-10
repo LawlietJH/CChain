@@ -8,14 +8,14 @@
 #                ╚██████╗╚██████╗██║  ██║██║  ██║██║██║ ╚████║
 #                 ╚═════╝ ╚═════╝╚═╝  ╚═╝╚═╝  ╚═╝╚═╝╚═╝  ╚═══╝
 #                                                         By: LawlietJH
-#                                                              v1.3.0
+#                                                              v1.3.1
 
 import time
 import sys
 import os
 
 Autor = "LawlietJH"
-Version = "v1.3.0"
+Version = "v1.3.1"
 
 
 
@@ -333,6 +333,17 @@ def Dec_Bin(Dec):	#~ Decimal a Binario.
 
 
 
+def Dec_Oct(Dec):	#~ Decimal a Octal.
+	
+	Numero = int(Dec)
+	Octal = oct(Numero)
+	Octal = Octal[2:]
+	Octal = str(Octal)
+	
+	return Octal
+
+
+
 #=============================================================================
 #================================== Menú Asc =================================
 #=============================================================================
@@ -359,7 +370,7 @@ def Asc_Menu():
 					try:
 						Asc = input("\n\n\t Cadena Ascii: ")
 						Hex = Asc_Hex(Asc)
-						print("\n\n\t Cadena en Hexadecimal: " + Hex + "\n")
+						print("\n\t Cadena en Hexadecimal: " + Hex + "\n\n")
 						
 					except KeyboardInterrupt:			#~ Ctrl+C para volver
 						print("\n\n\t Volviendo...")
@@ -378,7 +389,7 @@ def Asc_Menu():
 					try:
 						Asc = input("\n\n\t Cadena Ascii: ")
 						Bin = Asc_Bin(Asc)
-						print("\n\n\t Cadena en Binario: " + Bin + "\n")
+						print("\n\t Cadena en Binario: " + Bin + "\n\n")
 						
 					except KeyboardInterrupt:			#~ Ctrl+C para volver
 						print("\n\n\t Volviendo...")
@@ -397,7 +408,7 @@ def Asc_Menu():
 					try:
 						Asc = input("\n\n\t Cadena Ascii: ")
 						Dec = Asc_Dec(Asc)
-						print("\n\n\t Cadena en Decimal: " + Dec + "\n")
+						print("\n\t Cadena en Decimal: " + Dec + "\n\n")
 						
 					except KeyboardInterrupt:			#~ Ctrl+C para volver
 						print("\n\n\t Volviendo...")
@@ -445,7 +456,7 @@ def Hex_Menu():
 					try:
 						Hex = input("\n\n\t Cadena Hexadecimal: ")
 						Asc = Hex_Asc(Hex)
-						print("\n\n\t Cadena en Ascii: " + Asc + "\n")
+						print("\n\t Cadena en Ascii: " + Asc + "\n\n")
 						
 					except KeyboardInterrupt:			#~ Ctrl+C para volver
 						print("\n\n\t Volviendo...")
@@ -464,7 +475,7 @@ def Hex_Menu():
 					try:
 						Hex = input("\n\n\t Cadena Hexadecimal: ")
 						Bin = Hex_Bin(Hex)
-						print("\n\n\t Cadena en Binario: " + Bin + "\n")
+						print("\n\t Cadena en Binario: " + Bin + "\n\n")
 						
 					except KeyboardInterrupt:			#~ Ctrl+C para volver
 						print("\n\n\t Volviendo...")
@@ -483,7 +494,7 @@ def Hex_Menu():
 					try:
 						Hex = input("\n\n\t Cadena Hexadecimal: ")
 						Dec = Hex_Dec(Hex)
-						print("\n\n\t Cadena en Decimal: " + Dec + "\n")
+						print("\n\t Cadena en Decimal: " + Dec + "\n\n")
 						
 					except KeyboardInterrupt:			#~ Ctrl+C para volver
 						print("\n\n\t Volviendo...")
@@ -530,7 +541,7 @@ def Bin_Menu():
 					try:
 						Bin = input("\n\n\t Cadena Binaria: ")
 						Asc = Bin_Asc(Bin)
-						print("\n\n\t Cadena en Ascii: " + Asc + "\n")
+						print("\n\t Cadena en Ascii: " + Asc + "\n\n")
 						
 					except KeyboardInterrupt:			#~ Ctrl+C para volver
 						print("\n\n\t Volviendo...")
@@ -549,7 +560,7 @@ def Bin_Menu():
 					try:
 						Bin = input("\n\n\t Cadena Binaria: ")
 						Hex = Bin_Hex(Bin)
-						print("\n\n\t Cadena en Hexadecimal: " + Hex + "\n")
+						print("\n\t Cadena en Hexadecimal: " + Hex + "\n\n")
 						
 					except KeyboardInterrupt:			#~ Ctrl+C para volver
 						print("\n\n\t Volviendo...")
@@ -568,7 +579,7 @@ def Bin_Menu():
 					try:
 						Bin = input("\n\n\t Cadena Binaria: ")
 						Dec = Bin_Dec(Bin)
-						print("\n\n\t Cadena en Decimal: " + Dec + "\n")
+						print("\n\t Cadena en Decimal: " + Dec + "\n\n")
 						
 					except KeyboardInterrupt:			#~ Ctrl+C para volver
 						print("\n\n\t Volviendo...")
@@ -604,6 +615,7 @@ def Dec_Menu():
 			print("\n\n\t\t 1 - Decimal a Ascii.")
 			print("\n\t\t 2 - Decimal a Hexadecimal.")
 			print("\n\t\t 3 - Decimal a Binario.")
+			print("\n\t\t 4 - Decimal a Octal.")
 			Opc = input("\n\n\t Opción: ")
 			
 			if Opc == "1":
@@ -615,7 +627,7 @@ def Dec_Menu():
 					try:
 						Dec = input("\n\n\t Cadena Decimal: ")
 						Asc = Dec_Asc(Dec)
-						print("\n\n\t Cadena en Ascii: " + Asc + "\n")
+						print("\n\t Cadena en Ascii: " + Asc + "\n\n")
 						
 					except KeyboardInterrupt:			#~ Ctrl+C para volver
 						print("\n\n\t Volviendo...")
@@ -634,7 +646,7 @@ def Dec_Menu():
 					try:
 						Dec = input("\n\n\t Cadena Decimal: ")
 						Hex = Dec_Hex(Dec)
-						print("\n\n\t Cadena en Hexadecimal: " + Hex + "\n")
+						print("\n\t Cadena en Hexadecimal: " + Hex + "\n\n")
 						
 					except KeyboardInterrupt:			#~ Ctrl+C para volver
 						print("\n\n\t Volviendo...")
@@ -653,7 +665,26 @@ def Dec_Menu():
 					try:
 						Dec = input("\n\n\t Cadena Decimal: ")
 						Bin = Dec_Bin(Dec)
-						print("\n\n\t Cadena en Binario: " + Bin + "\n")
+						print("\n\t Cadena en Binario: " + Bin + "\n")
+						
+					except KeyboardInterrupt:			#~ Ctrl+C para volver
+						print("\n\n\t Volviendo...")
+						time.sleep(0.5)
+						break
+						
+					except:
+						print("\n\n Tiene Caracteres No Válidos.")
+			
+			elif Opc == "4":
+				os.system("cls && title De Decimal a Octal")
+				#~ Binario a Decimal:
+
+				while True:
+
+					try:
+						Dec = input("\n\n\t Cadena Decimal: ")
+						Oct = Dec_Oct(Dec)
+						print("\n\t Cadena en Octal: " + Oct + "\n\n")
 						
 					except KeyboardInterrupt:			#~ Ctrl+C para volver
 						print("\n\n\t Volviendo...")
