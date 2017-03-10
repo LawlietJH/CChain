@@ -8,14 +8,14 @@
 #                ╚██████╗╚██████╗██║  ██║██║  ██║██║██║ ╚████║
 #                 ╚═════╝ ╚═════╝╚═╝  ╚═╝╚═╝  ╚═╝╚═╝╚═╝  ╚═══╝
 #                                                         By: LawlietJH
-#                                                              v1.2.6
+#                                                              v1.2.7
 
 import time
 import sys
 import os
 
 Autor = "LawlietJH"
-Version = "v1.2.6"
+Version = "v1.2.7"
 
 
 
@@ -183,9 +183,12 @@ def Bin_Hex(Bin):	#~ Binario a Hexadecimal
 	
 	#~ Se añaden los espacios correspondientes en la cadena Hexadecimal.
 	for x in Hex:
+		
 		cont += 1
+		
 		if cont % 2 != 0:
 			Hexadecimal += x
+		
 		else:
 			Hexadecimal += x + " "
 	
@@ -227,23 +230,27 @@ def Bin_Dec(Bin):	#~ Binario a Decimal
 
 
 def Dec_Asc(Dec):	#~ Decimal a Ascii.
-		
-	lista = []
+	
 	xD = ""
+	Ascii = ""
+	Lista = []
 	
 	for num in Dec:
+		
 		if num != " ":
 			xD = xD + num
+		
 		else:
-			lista.append(chr(int(xD)))
+			Lista.append(chr(int(xD)))
 			xD = ""
-	lista.append(chr(int(xD)))
 			
-	print("\n\n [+] Decimal: \n\n >> ", end='')
-	for Ascii in lista:
-		print(Ascii, end='')	
+	Lista.append(chr(int(xD)))
 	
-	print("")
+	for Asc in Lista:
+		
+		Ascii += Asc	
+	
+	return Ascii
 
 
 
