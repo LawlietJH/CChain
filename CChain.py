@@ -8,14 +8,14 @@
 #                ╚██████╗╚██████╗██║  ██║██║  ██║██║██║ ╚████║
 #                 ╚═════╝ ╚═════╝╚═╝  ╚═╝╚═╝  ╚═╝╚═╝╚═╝  ╚═══╝
 #                                                         By: LawlietJH
-#                                                              v1.2.4
+#                                                              v1.2.5
 
 import time
 import sys
 import os
 
 Autor = "LawlietJH"
-Version = "v1.2.4"
+Version = "v1.2.5"
 
 
 
@@ -157,6 +157,69 @@ def Hex_Dec(Hex):	#~ Hexadecimal a Decimal.
 
 
 #=============================================================================
+#================================== Binario ==================================
+#=============================================================================
+
+
+
+
+def Bin_Asc(Bin):	#~ Binario a Ascii
+
+	Bin = Bin.replace(" ", "")	#~ Remplaza Los espacios por Cadena Vacia.
+
+	Ascii = ''.join((chr(int(Bin[i:i+8], 2)) for i in range(0, len(Bin), 8)))
+	
+	return Ascii
+
+
+
+def Bin_Hex(Bin):	#~ Binario a Hexadecimal
+	
+	cont = 0
+	Bin = Bin.replace(" ", "")
+
+	Hex = ''.join((hex(int(Bin[i:i+8], 2))[2:] for i in range(0, len(Bin), 8)))
+	
+	print("\n\n [+] Hexadecimal: \n\n >> ", end='')
+	for x in Hex:
+		cont += 1
+		if cont % 2 != 0:
+			print(x, end='')
+		else:
+			print(x, end=' ')
+	
+	print("")
+
+
+
+def Bin_Dec(Bin):	#~ Binario a Decimal
+	
+	xD = ""
+	Lista = []
+	Decimal = ""
+	
+	#~ Se toma cada Byte y se Almacena en Lista para su Posterior conversión.
+	for Num in Bin:
+		
+		if Num != " ":
+			xD = xD + Num
+			
+		else:
+			xD = int(xD, 2)
+			Lista.append(xD)
+			xD = ""
+	
+	xD = int(xD, 2)
+	Lista.append(xD)
+	
+	for Dec in Lista:			#~ Se Añade Cada Número a la Cadena.
+		Decimal += str(Dec) + " "
+	
+	return Decimal
+
+
+
+#=============================================================================
 #================================== Decimal ==================================
 #=============================================================================
 
@@ -248,71 +311,6 @@ def Dec_Bin(Dec):	#~ Decimal a Binario.
 		Binario += Bin + " "
 	
 	return Binario
-
-
-
-#=============================================================================
-#================================== Binario ==================================
-#=============================================================================
-
-
-
-
-def Bin_Asc(Bin):	#~ Binario a Ascii
-
-	Bin = Bin.replace(" ", "")
-
-	Ascii = ''.join((chr(int(Bin[i:i+8], 2)) for i in range(0, len(Bin), 8)))
-	
-	print("\n\n [+] Ascii: \n\n >> "+Ascii, end='')
-	
-	print("")
-
-
-
-def Bin_Hex(Bin):	#~ Binario a Hexadecimal
-	
-	cont = 0
-	Bin = Bin.replace(" ", "")
-
-	Hex = ''.join((hex(int(Bin[i:i+8], 2))[2:] for i in range(0, len(Bin), 8)))
-	
-	print("\n\n [+] Hexadecimal: \n\n >> ", end='')
-	for x in Hex:
-		cont += 1
-		if cont % 2 != 0:
-			print(x, end='')
-		else:
-			print(x, end=' ')
-	
-	print("")
-
-
-
-def Bin_Dec(Bin):	#~ Binario a Decimal
-	
-	xD = ""
-	Lista = []
-	Decimal = ""
-	
-	#~ Se toma cada Byte y se Almacena en Lista para su Posterior conversión.
-	for Num in Bin:
-		
-		if Num != " ":
-			xD = xD + Num
-			
-		else:
-			xD = int(xD, 2)
-			Lista.append(xD)
-			xD = ""
-	
-	xD = int(xD, 2)
-	Lista.append(xD)
-	
-	for Dec in Lista:			#~ Se Añade Cada Número a la Cadena.
-		Decimal += str(Dec) + " "
-	
-	return Decimal
 
 
 
