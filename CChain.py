@@ -8,14 +8,14 @@
 #                ╚██████╗╚██████╗██║  ██║██║  ██║██║██║ ╚████║
 #                 ╚═════╝ ╚═════╝╚═╝  ╚═╝╚═╝  ╚═╝╚═╝╚═╝  ╚═══╝
 #                                                         By: LawlietJH
-#                                                              v1.3.1
+#                                                              v1.3.2
 
 import time
 import sys
 import os
 
 Autor = "LawlietJH"
-Version = "v1.3.1"
+Version = "v1.3.2"
 
 
 
@@ -341,6 +341,20 @@ def Dec_Oct(Dec):	#~ Decimal a Octal.
 	Octal = str(Octal)
 	
 	return Octal
+
+
+
+#=============================================================================
+#==================================== Octal ==================================
+#=============================================================================
+
+
+
+def Oct_Dec(Oct):
+	
+	Decimal = str(int(Oct, 8))
+	
+	return Decimal
 
 
 
@@ -706,6 +720,50 @@ def Dec_Menu():
 
 
 #=============================================================================
+#================================== Menú Oct =================================
+#=============================================================================
+
+
+
+def Oct_Menu():
+	while True:
+		
+		try:
+			os.system("cls && title Octal Menú")
+			print("\n\n\t\t 1 - Octal a Decimal.")
+			Opc = input("\n\n\t Opción: ")
+			
+			if Opc == "1":
+				os.system("cls && title De Octal a Decimal")
+				#~ Binario a Ascii:
+
+				while True:
+
+					try:
+						Oct = input("\n\n\t Cadena Octal: ")
+						Dec = Oct_Dec(Oct)
+						print("\n\t Cadena en Decimal: " + Dec + "\n\n")
+						
+					except KeyboardInterrupt:			#~ Ctrl+C para volver
+						print("\n\n\t Volviendo...")
+						time.sleep(0.5)
+						break
+						
+					except:
+						print("\n\n Tiene Caracteres No Válidos.")
+								
+			else:
+				print("\n\n\t\t Opción no válida...")
+				time.sleep(0.5)
+				
+		except KeyboardInterrupt:			#~ Ctrl+C para volver
+			print("\n\n\t Volviendo...")
+			time.sleep(0.5)
+			break
+	
+	
+	
+#=============================================================================
 #=============================== Menú Principal ==============================
 #=============================================================================
 
@@ -722,6 +780,7 @@ def main():
 			print("\n\n\t\t 2 - Hexadecimal.")
 			print("\n\n\t\t 3 - Binario.")
 			print("\n\n\t\t 4 - Decimal.")
+			print("\n\n\t\t 5 - Octal.")
 			Opc = input("\n\n\t Opción: ")
 			
 			if Opc == "1":
@@ -736,6 +795,9 @@ def main():
 				
 			elif Opc == "4":
 				Dec_Menu()
+				
+			elif Opc == "5":
+				Oct_Menu()
 				
 			else:
 				print("\n\n\t\t Opción no válida...")
