@@ -46,3 +46,7 @@ __Para poder volver a algún Menú se debe precionar:__  ___Ctrl + C___
   * Decimal a Binario. [\[Código Fuente\]](https://github.com/LawlietJH/CChain/blob/master/CChain.py#L316)
   * Decimal a Octal. [\[Código Fuente\]](https://github.com/LawlietJH/CChain/blob/master/CChain.py#L336)
   
+5. Octal.
+  * Octal a Hexadecimal.
+  * Octal a Binario.
+  * Octal a Decimal.
