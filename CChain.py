@@ -8,14 +8,14 @@
 #                ╚██████╗╚██████╗██║  ██║██║  ██║██║██║ ╚████║
 #                 ╚═════╝ ╚═════╝╚═╝  ╚═╝╚═╝  ╚═╝╚═╝╚═╝  ╚═══╝
 #                                                         By: LawlietJH
-#                                                              v1.3.6
+#                                                              v1.3.7
 
 import time
 import sys
 import os
 
 Autor = "LawlietJH"
-Version = "v1.3.6"
+Version = "v1.3.7"
 
 
 
@@ -25,12 +25,12 @@ Version = "v1.3.6"
 
 
 
-def Asc_Hex(Ascii):	#~ Ascii a Hexadecimal.
+def Asc_Hex(Asc):	#~ Ascii a Hexadecimal.
 	
 	cont = 0
 	Hexadecimal = ""
 	
-	Hex = ''.join((hex(ord(c))[2:] for c in Ascii))
+	Hex = ''.join((hex(ord(c))[2:] for c in Asc))
 	
 	#~ Se Separa la Cadena con un Espacio en Cada Byte.
 	for x in Hex:
@@ -49,12 +49,12 @@ def Asc_Hex(Ascii):	#~ Ascii a Hexadecimal.
 
 
 
-def Asc_Bin(Ascii):	#~ Ascii a Binario.
+def Asc_Bin(Asc):	#~ Ascii a Binario.
 	
 	cont = 0
 	Binario = ""
 
-	Bin = ''.join((bin(ord(c))[2:].zfill(8) for c in Ascii))
+	Bin = ''.join((bin(ord(c))[2:].zfill(8) for c in Asc))
 	
 	#~ Se Separa la Cadena con un Espacio en Cada Byte.
 	for b in Bin:
@@ -72,18 +72,35 @@ def Asc_Bin(Ascii):	#~ Ascii a Binario.
 
 
 
-def Asc_Dec(Ascii):	#~ Ascii a Decimal.
+def Asc_Dec(Asc):	#~ Ascii a Decimal.
 	
 	Lista = []
 	Decimal = ""
 	
-	for Letra in Ascii:				#~ Se Añaden los Caracteres a la Lista
+	for Letra in Asc:				#~ Se Añaden los Caracteres a la Lista
 		Lista.append(ord(Letra))	#~ Convertidos en su Respectivo Decimal.  
 	
 	for Dec in Lista:				#~ Se Añaden los Números a la Cadena.
 		Decimal += str(Dec) + " "
 	
 	return Decimal
+
+
+
+def Asc_Oct(Asc):	#~ Ascii a Octal.
+	
+	Dec = ""
+	Oct = ""
+	Octal = ""
+	Lista = [ord(Letra) for Letra in Asc]	#~ Se Añaden los Caracteres a la Lista.	
+	
+	for Deci in Lista:	#~ Se Añaden los Números a la Cadena.
+		Numero = int(Deci)
+		Oct = oct(Numero)
+		Oct = Oct[2:]
+		Octal += str(Oct) + " "
+	
+	return Octal
 
 
 
@@ -416,6 +433,7 @@ def Asc_Menu():
 			print("\n\n\t\t 1 - Ascii a Hexadecimal.")
 			print("\n\t\t 2 - Ascii a Binario.")
 			print("\n\t\t 3 - Ascii a Decimal.")
+			print("\n\t\t 4 - Ascii a Octal.")
 			Opc = input("\n\n\t Opción: ")
 			
 			if Opc == "1":
@@ -466,6 +484,25 @@ def Asc_Menu():
 						Asc = input("\n\n\t Cadena Ascii: ")
 						Dec = Asc_Dec(Asc)
 						print("\n\t Cadena en Decimal: " + Dec + "\n\n")
+						
+					except KeyboardInterrupt:			#~ Ctrl+C para volver
+						print("\n\n\t Volviendo...")
+						time.sleep(0.5)
+						break
+						
+					except:
+						print("\n\n Tiene Caracteres No Válidos.")
+			
+			elif Opc == "4":
+				os.system("cls && title De Ascii a Octal")
+				#~ Ascii a Octal:
+
+				while True:
+
+					try:
+						Asc = input("\n\n\t Cadena Ascii: ")
+						Oct = Asc_Oct(Asc)
+						print("\n\t Cadena en Octal: " + Oct + "\n\n")
 						
 					except KeyboardInterrupt:			#~ Ctrl+C para volver
 						print("\n\n\t Volviendo...")
