@@ -8,14 +8,14 @@
 #                ╚██████╗╚██████╗██║  ██║██║  ██║██║██║ ╚████║
 #                 ╚═════╝ ╚═════╝╚═╝  ╚═╝╚═╝  ╚═╝╚═╝╚═╝  ╚═══╝
 #                                                         By: LawlietJH
-#                                                              v1.3.5
+#                                                              v1.3.6
 
 import time
 import sys
 import os
 
 Autor = "LawlietJH"
-Version = "v1.3.5"
+Version = "v1.3.6"
 
 
 
@@ -158,6 +158,16 @@ def Hex_Dec(Hex):	#~ Hexadecimal a Decimal.
 
 
 
+def Hex_Oct(Hex):	#~ Hexadecimal a Octal.
+	
+	Oct = int(Hex, 16)
+	Oct = str(oct(Oct))
+	Octal = Oct[2:]
+	
+	return Octal
+
+
+
 #=============================================================================
 #================================== Binario ==================================
 #=============================================================================
@@ -231,7 +241,7 @@ def Bin_Dec(Bin):	#~ Binario a Decimal
 
 
 
-def Bin_Oct(Bin):
+def Bin_Oct(Bin):	#~ Binario a Octal.
 	
 	Oct = int(Bin, 2)
 	Oct = oct(Oct)
@@ -362,7 +372,17 @@ def Dec_Oct(Dec):	#~ Decimal a Octal.
 
 
 
-def Oct_Bin(Oct):
+def Oct_Hex(Oct):	#~ Octal a Hexadecimal.
+	
+	Hex = int(Oct, 8)
+	Hex = hex(Hex)
+	Hexadecimal = Hex[2:]
+	
+	return Hexadecimal
+
+
+
+def Oct_Bin(Oct):	#~ Octal a Binario.
 	
 	Binario = int(Oct, 8)
 	Binario = bin(Binario)
@@ -372,21 +392,11 @@ def Oct_Bin(Oct):
 
 
 
-def Oct_Dec(Oct):
+def Oct_Dec(Oct):	#~ Octal a Decimal.
 	
 	Decimal = str(int(Oct, 8))
 	
 	return Decimal
-
-
-
-def Oct_Hex(Oct):
-	
-	Hex = int(Oct, 8)
-	Hex = hex(Hex)
-	Hexadecimal = Hex[2:]
-	
-	return Hexadecimal
 
 
 
@@ -492,6 +502,7 @@ def Hex_Menu():
 			print("\n\n\t\t 1 - Hexadecimal a Ascii.")
 			print("\n\t\t 2 - Hexadecimal a Binario.")
 			print("\n\t\t 3 - Hexadecimal a Decimal.")
+			print("\n\t\t 4 - Hexadecimal a Octal.")
 			Opc = input("\n\n\t Opción: ")
 			
 			if Opc == "1":
@@ -535,13 +546,32 @@ def Hex_Menu():
 			elif Opc == "3":
 				os.system("cls && title De Hexadecimal a Decimal")
 				#~ Hexadecimal a Decimal:
-
+			
 				while True:
-
+			
 					try:
 						Hex = input("\n\n\t Cadena Hexadecimal: ")
 						Dec = Hex_Dec(Hex)
 						print("\n\t Cadena en Decimal: " + Dec + "\n\n")
+						
+					except KeyboardInterrupt:			#~ Ctrl+C para volver
+						print("\n\n\t Volviendo...")
+						time.sleep(0.5)
+						break
+						
+					except:
+						print("\n\n Tiene Caracteres No Válidos.")
+			
+			elif Opc == "4":
+				os.system("cls && title De Hexadecimal a Octal")
+				#~ Hexadecimal a Octal:
+			
+				while True:
+			
+					try:
+						Hex = input("\n\n\t Cadena Hexadecimal: ")
+						Oct = Hex_Oct(Hex)
+						print("\n\t Cadena en Octal: " + Oct + "\n\n")
 						
 					except KeyboardInterrupt:			#~ Ctrl+C para volver
 						print("\n\n\t Volviendo...")
@@ -785,8 +815,8 @@ def Oct_Menu():
 		try:
 			os.system("cls && title Octal Menú")
 			print("\n\n\t\t 1 - Octal a Hexadecimal.")
-			print("\n\n\t\t 2 - Octal a Binario.")
-			print("\n\n\t\t 3 - Octal a Decimal.")
+			print("\n\t\t 2 - Octal a Binario.")
+			print("\n\t\t 3 - Octal a Decimal.")
 			Opc = input("\n\n\t Opción: ")
 			
 			if Opc == "1":
@@ -808,7 +838,7 @@ def Oct_Menu():
 					except:
 						print("\n\n Tiene Caracteres No Válidos.")
 								
-			if Opc == "2":
+			elif Opc == "2":
 				os.system("cls && title De Octal a Binario")
 				#~ Octal a Binario:
 
@@ -827,7 +857,7 @@ def Oct_Menu():
 					except:
 						print("\n\n Tiene Caracteres No Válidos.")
 								
-			elif Opc == "2":
+			elif Opc == "3":
 				os.system("cls && title De Octal a Decimal")
 				#~ Octal a Decimal:
 
@@ -871,10 +901,10 @@ def main():
 			os.system("cls && title CChain.py        \
 			by:  LawlietJH")
 			print("\n\n\t\t 1 - Ascii.")
-			print("\n\n\t\t 2 - Hexadecimal.")
-			print("\n\n\t\t 3 - Binario.")
-			print("\n\n\t\t 4 - Decimal.")
-			print("\n\n\t\t 5 - Octal.")
+			print("\n\t\t 2 - Hexadecimal.")
+			print("\n\t\t 3 - Binario.")
+			print("\n\t\t 4 - Decimal.")
+			print("\n\t\t 5 - Octal.")
 			Opc = input("\n\n\t Opción: ")
 			
 			if Opc == "1":
