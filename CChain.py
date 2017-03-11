@@ -8,14 +8,14 @@
 #                ╚██████╗╚██████╗██║  ██║██║  ██║██║██║ ╚████║
 #                 ╚═════╝ ╚═════╝╚═╝  ╚═╝╚═╝  ╚═╝╚═╝╚═╝  ╚═══╝
 #                                                         By: LawlietJH
-#                                                              v1.3.7
+#                                                              v1.3.8
 
 import time
 import sys
 import os
 
 Autor = "LawlietJH"
-Version = "v1.3.7"
+Version = "v1.3.8"
 
 
 
@@ -386,6 +386,32 @@ def Dec_Oct(Dec):	#~ Decimal a Octal.
 #=============================================================================
 #==================================== Octal ==================================
 #=============================================================================
+
+
+
+def Oct_Asc(Oct):	#~ Octal a Ascii.
+	
+	xD = ""
+	Ascii = ""
+	Lista = []
+	Dec = str(int(Oct, 8))
+	
+	for num in Dec:
+		
+		if num != " ":
+			xD = xD + num
+		
+		else:
+			Lista.append(chr(int(xD)))
+			xD = ""
+			
+	Lista.append(chr(int(xD)))
+	
+	for Asc in Lista:
+		
+		Ascii += Asc	
+	
+	return Ascii
 
 
 
@@ -851,12 +877,32 @@ def Oct_Menu():
 		
 		try:
 			os.system("cls && title Octal Menú")
-			print("\n\n\t\t 1 - Octal a Hexadecimal.")
-			print("\n\t\t 2 - Octal a Binario.")
-			print("\n\t\t 3 - Octal a Decimal.")
+			print("\n\n\t\t 1 - Octal a Ascii.")
+			print("\n\t\t 2 - Octal a Hexadecimal.")
+			print("\n\t\t 3 - Octal a Binario.")
+			print("\n\t\t 4 - Octal a Decimal.")
 			Opc = input("\n\n\t Opción: ")
 			
 			if Opc == "1":
+				os.system("cls && title De Octal a Ascii")
+				#~ Octal a Ascii:
+
+				while True:
+
+					try:
+						Oct = input("\n\n\t Cadena Octal: ")
+						Asc = Oct_Asc(Oct)
+						print("\n\t Cadena en Ascii: " + Asc + "\n\n")
+						
+					except KeyboardInterrupt:			#~ Ctrl+C para volver
+						print("\n\n\t Volviendo...")
+						time.sleep(0.5)
+						break
+						
+					except:
+						print("\n\n Tiene Caracteres No Válidos.")
+								
+			if Opc == "2":
 				os.system("cls && title De Octal a Hexadecimal")
 				#~ Octal a Hexadecimal:
 
@@ -875,7 +921,7 @@ def Oct_Menu():
 					except:
 						print("\n\n Tiene Caracteres No Válidos.")
 								
-			elif Opc == "2":
+			elif Opc == "3":
 				os.system("cls && title De Octal a Binario")
 				#~ Octal a Binario:
 
@@ -894,7 +940,7 @@ def Oct_Menu():
 					except:
 						print("\n\n Tiene Caracteres No Válidos.")
 								
-			elif Opc == "3":
+			elif Opc == "4":
 				os.system("cls && title De Octal a Decimal")
 				#~ Octal a Decimal:
 
