@@ -8,14 +8,14 @@
 #                ╚██████╗╚██████╗██║  ██║██║  ██║██║██║ ╚████║
 #                 ╚═════╝ ╚═════╝╚═╝  ╚═╝╚═╝  ╚═╝╚═╝╚═╝  ╚═══╝
 #                                                         By: LawlietJH
-#                                                              v1.3.8
+#                                                              v1.3.9
 
 import time
 import sys
 import os
 
 Autor = "LawlietJH"
-Version = "v1.3.8"
+Version = "v1.3.9"
 
 
 
@@ -394,18 +394,17 @@ def Oct_Asc(Oct):	#~ Octal a Ascii.
 	xD = ""
 	Ascii = ""
 	Lista = []
-	Dec = str(int(Oct, 8))
 	
-	for num in Dec:
+	for num in Oct:
 		
 		if num != " ":
 			xD = xD + num
 		
 		else:
-			Lista.append(chr(int(xD)))
+			Lista.append(chr(int(xD, 8)))
 			xD = ""
-			
-	Lista.append(chr(int(xD)))
+	
+	Lista.append(chr(int(xD, 8)))
 	
 	for Asc in Lista:
 		
@@ -902,7 +901,7 @@ def Oct_Menu():
 					except:
 						print("\n\n Tiene Caracteres No Válidos.")
 								
-			if Opc == "2":
+			elif Opc == "2":
 				os.system("cls && title De Octal a Hexadecimal")
 				#~ Octal a Hexadecimal:
 
