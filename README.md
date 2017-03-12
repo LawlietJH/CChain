@@ -1,5 +1,5 @@
 # CChain
-## Convierte Cadenas en Ascii, Binario, Decimal y Hexadecimal.
+## Convierte Cadenas en Ascii, Binario, Decimal, Hexadecimal y Octal.
 
 
                  ██████╗ ██████╗██╗  ██╗ █████╗ ██╗███╗   ██╗
@@ -13,7 +13,7 @@
                             ║  ├─┤││││  │├┤  │ ║╠═╣
                             ╩═╝┴ ┴└┴┘┴─┘┴└─┘ ┴╚╝╩ ╩
                  
-                                     v1.4.0
+                                     v1.4.4
 
 - - -
 
@@ -47,7 +47,9 @@ __Para poder volver a algún Menú se debe precionar:__  ___Ctrl + C___
   * Decimal a Binario. [\[Código Fuente\]](https://github.com/LawlietJH/CChain/blob/master/CChain.py#L369)
   * Decimal a Octal. [\[Código Fuente\]](https://github.com/LawlietJH/CChain/blob/master/CChain.py#L411)
   
-5. Octal. [\[Menú\]](https://github.com/LawlietJH/CChain/blob/master/CChain.py#L811)
-  * Octal a Hexadecimal. [\[Código Fuente\]](https://github.com/LawlietJH/CChain/blob/master/CChain.py#L375)
-  * Octal a Binario. [\[Código Fuente\]](https://github.com/LawlietJH/CChain/blob/master/CChain.py#L385)
-  * Octal a Decimal. [\[Código Fuente\]](https://github.com/LawlietJH/CChain/blob/master/CChain.py#L395)
+5. Octal. [\[Menú\]](https://github.com/LawlietJH/CChain/blob/master/CChain.py#L995)
+  * Octal a Ascii. [\[Código Fuente\]](https://github.com/LawlietJH/CChain/blob/master/CChain.py#L446)
+  * Octal a Hexadecimal. [\[Código Fuente\]](https://github.com/LawlietJH/CChain/blob/master/CChain.py#L471)
+  * Octal a Binario. [\[Código Fuente\]](https://github.com/LawlietJH/CChain/blob/master/CChain.py#L502)
+  * Octal a Decimal. [\[Código Fuente\]](https://github.com/LawlietJH/CChain/blob/master/CChain.py#L540)
+  
