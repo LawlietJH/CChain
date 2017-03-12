@@ -27,6 +27,7 @@ __Para poder volver a algún Menú se debe precionar:__  ___Ctrl + C___
   * Ascii a Hexadecimal. [\[Código Fuente\]](https://github.com/LawlietJH/CChain/blob/master/CChain.py#L28)
   * Ascii a Binario. [\[Código Fuente\]](https://github.com/LawlietJH/CChain/blob/master/CChain.py#L52)
   * Ascii a Decimal. [\[Código Fuente\]](https://github.com/LawlietJH/CChain/blob/master/CChain.py#L75)
+  * Ascii a Octal. [\[Código Fuente\]](https://github.com/LawlietJH/CChain/blob/master/CChain.py#L90)
   
 2. Hexadecimal. [\[Menú\]](https://github.com/LawlietJH/CChain/blob/master/CChain.py#L496)
   * Hexadecimal a Ascii. [\[Código Fuente\]](https://github.com/LawlietJH/CChain/blob/master/CChain.py#L96)
