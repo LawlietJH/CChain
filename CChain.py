@@ -8,14 +8,14 @@
 #                ╚██████╗╚██████╗██║  ██║██║  ██║██║██║ ╚████║
 #                 ╚═════╝ ╚═════╝╚═╝  ╚═╝╚═╝  ╚═╝╚═╝╚═╝  ╚═══╝
 #                                                         By: LawlietJH
-#                                                              v1.4.3
+#                                                              v1.4.4
 
 import time
 import sys
 import os
 
 Autor = "LawlietJH"
-Version = "v1.4.3"
+Version = "v1.4.4"
 
 
 
@@ -480,12 +480,12 @@ def Oct_Hex(Oct):	#~ Octal a Hexadecimal.
 			xD = xD + Hex
 		
 		else:
-			xD = hex(int(xD, 8))
+			xD = str(hex(int(xD, 8)))
 			xD = xD[2:]
 			Lista.append(xD)
 			xD = ""
 	
-	xD = hex(int(xD, 8))
+	xD = str(hex(int(xD, 8)))
 	xD = xD[2:]
 	Lista.append(xD)
 	
@@ -500,41 +500,38 @@ def Oct_Hex(Oct):	#~ Octal a Hexadecimal.
 
 
 def Oct_Bin(Oct):	#~ Octal a Binario.
-		
+	
 	xD = ""
-	cont = 0
-	Ascii = ""
 	Lista = []
 	Binario = ""
 	
-	for num in Oct:
+	for x in Oct:
 		
-		if num != " ":
-			xD = xD + num
+		if x != " ":
+			
+			xD += x
 		
 		else:
-			Lista.append(chr(int(xD, 8)))
+			xD = str(bin(int(xD, 8)))
+			xD = xD[2:]
+			Lista.append(xD)
 			xD = ""
 	
-	Lista.append(chr(int(xD, 8)))
-	
-	for Asc in Lista:
+	xD = str(bin(int(xD, 8)))
+	xD = xD[2:]
+	Lista.append(xD)
+			
+	for x in Lista:
 		
-		Ascii += Asc	
-
-	Bin = ''.join((bin(ord(c))[2:].zfill(8) for c in Ascii))
-	
-	#~ Se Separa la Cadena con un Espacio en Cada Byte.
-	for b in Bin:
-		
-		cont += 1
-		
-		if(cont <= 7):
-			Binario = Binario + b
+		if len(x) != 8:
+			
+			Binario += "0" + x + " "
 		
 		else:
-			Binario = Binario + b + " "
-			cont = 0
+		
+			Binario += x + " "	
+	
+	Binario = Binario.upper()
 	
 	return Binario
 
@@ -542,7 +539,26 @@ def Oct_Bin(Oct):	#~ Octal a Binario.
 
 def Oct_Dec(Oct):	#~ Octal a Decimal.
 	
-	Decimal = str(int(Oct, 8))
+	xD = ""
+	Lista = []
+	Decimal = ""
+	
+	for x in Oct:
+		
+		if x != " ":
+			
+			xD += x
+		
+		else:
+			
+			Lista.append(str(int(xD, 8)))
+			xD = ""
+	
+	Lista.append(str(int(xD, 8)))
+	
+	for x in Lista:
+		
+		Decimal += x + " "	
 	
 	return Decimal
 
