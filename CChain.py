@@ -8,14 +8,14 @@
 #                ╚██████╗╚██████╗██║  ██║██║  ██║██║██║ ╚████║
 #                 ╚═════╝ ╚═════╝╚═╝  ╚═╝╚═╝  ╚═╝╚═╝╚═╝  ╚═══╝
 #                                                         By: LawlietJH
-#                                                              v1.4.0
+#                                                              v1.4.1
 
 import time
 import sys
 import os
 
 Autor = "LawlietJH"
-Version = "v1.4.0"
+Version = "v1.4.1"
 
 
 
@@ -278,14 +278,31 @@ def Bin_Dec(Bin):	#~ Binario a Decimal
 
 
 def Bin_Oct(Bin):	#~ Binario a Octal.
+		
+	xD = ""
+	Octal = ""
+	Lista = []
 	
-	Oct = int(Bin, 2)
-	Oct = oct(Oct)
-	Oct = str(Oct)
-	Oct = Oct[2:]
+	for num in Bin:
+		
+		if num != " ":
+			xD = xD + num
+		
+		else:
+			xD = str(oct(int(xD, 2)))
+			xD = xD[2:]
+			Lista.append(xD)
+			xD = ""
 	
-	return Oct
-
+	xD = str(oct(int(xD, 2)))
+	xD = xD[2:]
+	Lista.append(xD)
+	
+	for Oct in Lista:
+		
+		Octal += Oct + " "	
+	
+	return Octal
 
 
 
