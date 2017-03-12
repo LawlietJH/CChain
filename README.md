@@ -23,17 +23,17 @@ __Para poder volver a algún Menú se debe precionar:__  ___Ctrl + C___
 
 ### Menús:
 
-1. Ascii. [\[Menú\]](https://github.com/LawlietJH/CChain/blob/master/CChain.py#L410)
+1. Ascii. [\[Menú\]](https://github.com/LawlietJH/CChain/blob/master/CChain.py#L574)
   * Ascii a Hexadecimal. [\[Código Fuente\]](https://github.com/LawlietJH/CChain/blob/master/CChain.py#L28)
   * Ascii a Binario. [\[Código Fuente\]](https://github.com/LawlietJH/CChain/blob/master/CChain.py#L52)
   * Ascii a Decimal. [\[Código Fuente\]](https://github.com/LawlietJH/CChain/blob/master/CChain.py#L75)
   * Ascii a Octal. [\[Código Fuente\]](https://github.com/LawlietJH/CChain/blob/master/CChain.py#L90)
   
-2. Hexadecimal. [\[Menú\]](https://github.com/LawlietJH/CChain/blob/master/CChain.py#L496)
-  * Hexadecimal a Ascii. [\[Código Fuente\]](https://github.com/LawlietJH/CChain/blob/master/CChain.py#L96)
-  * Hexadecimal a Binario. [\[Código Fuente\]](https://github.com/LawlietJH/CChain/blob/master/CChain.py#L106)
-  * Hexadecimal a Decimal. [\[Código Fuente\]](https://github.com/LawlietJH/CChain/blob/master/CChain.py#L130)
-  * Hexadecimal a Octal. [\[Código Fuente\]](https://github.com/LawlietJH/CChain/blob/master/CChain.py#L161)
+2. Hexadecimal. [\[Menú\]](https://github.com/LawlietJH/CChain/blob/master/CChain.py#L680)
+  * Hexadecimal a Ascii. [\[Código Fuente\]](https://github.com/LawlietJH/CChain/blob/master/CChain.py#L113)
+  * Hexadecimal a Binario. [\[Código Fuente\]](https://github.com/LawlietJH/CChain/blob/master/CChain.py#L123)
+  * Hexadecimal a Decimal. [\[Código Fuente\]](https://github.com/LawlietJH/CChain/blob/master/CChain.py#L147)
+  * Hexadecimal a Octal. [\[Código Fuente\]](https://github.com/LawlietJH/CChain/blob/master/CChain.py#L178)
   
 3. Binario. [\[Menú\]](https://github.com/LawlietJH/CChain/blob/master/CChain.py#L601)
   * Binario a Ascii. [\[Código Fuente\]](https://github.com/LawlietJH/CChain/blob/master/CChain.py#L178)
