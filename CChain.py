@@ -8,14 +8,14 @@
 #                ╚██████╗╚██████╗██║  ██║██║  ██║██║██║ ╚████║
 #                 ╚═════╝ ╚═════╝╚═╝  ╚═╝╚═╝  ╚═╝╚═╝╚═╝  ╚═══╝
 #                                                         By: LawlietJH
-#                                                              v1.3.9
+#                                                              v1.4.0
 
 import time
 import sys
 import os
 
 Autor = "LawlietJH"
-Version = "v1.3.9"
+Version = "v1.4.0"
 
 
 
@@ -177,9 +177,28 @@ def Hex_Dec(Hex):	#~ Hexadecimal a Decimal.
 
 def Hex_Oct(Hex):	#~ Hexadecimal a Octal.
 	
-	Oct = int(Hex, 16)
-	Oct = str(oct(Oct))
-	Octal = Oct[2:]
+	xD = ""
+	Octal = ""
+	Lista = []
+	
+	for num in Hex:
+		
+		if num != " ":
+			xD = xD + num
+		
+		else:
+			xD = str(oct(int(xD, 16)))
+			xD = xD[2:]
+			Lista.append(xD)
+			xD = ""
+	
+	xD = str(oct(int(xD, 16)))
+	xD = xD[2:]
+	Lista.append(xD)
+	
+	for Oct in Lista:
+		
+		Octal += Oct + " "	
 	
 	return Octal
 
