@@ -8,14 +8,14 @@
 #                ╚██████╗╚██████╗██║  ██║██║  ██║██║██║ ╚████║
 #                 ╚═════╝ ╚═════╝╚═╝  ╚═╝╚═╝  ╚═╝╚═╝╚═╝  ╚═══╝
 #                                                         By: LawlietJH
-#                                                              v1.4.2
+#                                                              v1.4.3
 
 import time
 import sys
 import os
 
 Autor = "LawlietJH"
-Version = "v1.4.2"
+Version = "v1.4.3"
 
 
 
@@ -470,19 +470,71 @@ def Oct_Asc(Oct):	#~ Octal a Ascii.
 
 def Oct_Hex(Oct):	#~ Octal a Hexadecimal.
 	
-	Hex = int(Oct, 8)
-	Hex = hex(Hex)
-	Hexadecimal = Hex[2:]
+	xD = ""
+	Lista = []
+	Hexadecimal = ""
+	
+	for Hex in Oct:
+		
+		if Hex != " ":
+			xD = xD + Hex
+		
+		else:
+			xD = hex(int(xD, 8))
+			xD = xD[2:]
+			Lista.append(xD)
+			xD = ""
+	
+	xD = hex(int(xD, 8))
+	xD = xD[2:]
+	Lista.append(xD)
+	
+	for Hexa in Lista:
+		
+		Hexadecimal += Hexa + " "
+	
+	Hexadecimal = Hexadecimal.upper()
 	
 	return Hexadecimal
 
 
 
 def Oct_Bin(Oct):	#~ Octal a Binario.
+		
+	xD = ""
+	cont = 0
+	Ascii = ""
+	Lista = []
+	Binario = ""
 	
-	Binario = int(Oct, 8)
-	Binario = bin(Binario)
-	Binario = Binario[2:]
+	for num in Oct:
+		
+		if num != " ":
+			xD = xD + num
+		
+		else:
+			Lista.append(chr(int(xD, 8)))
+			xD = ""
+	
+	Lista.append(chr(int(xD, 8)))
+	
+	for Asc in Lista:
+		
+		Ascii += Asc	
+
+	Bin = ''.join((bin(ord(c))[2:].zfill(8) for c in Ascii))
+	
+	#~ Se Separa la Cadena con un Espacio en Cada Byte.
+	for b in Bin:
+		
+		cont += 1
+		
+		if(cont <= 7):
+			Binario = Binario + b
+		
+		else:
+			Binario = Binario + b + " "
+			cont = 0
 	
 	return Binario
 
