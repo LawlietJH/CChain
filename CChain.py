@@ -8,14 +8,14 @@
 #                ╚██████╗╚██████╗██║  ██║██║  ██║██║██║ ╚████║
 #                 ╚═════╝ ╚═════╝╚═╝  ╚═╝╚═╝  ╚═╝╚═╝╚═╝  ╚═══╝
 #                                                         By: LawlietJH
-#                                                              v1.4.4
+#                                                              v1.4.5
 
 import time
 import sys
 import os
 
 Autor = "LawlietJH"
-Version = "v1.4.4"
+Version = "v1.4.5"
 
 
 
@@ -531,7 +531,7 @@ def Oct_Bin(Oct):	#~ Octal a Binario.
 		
 			Binario += x + " "	
 	
-	Binario = Binario.upper()
+	Binario = Binario
 	
 	return Binario
 
@@ -564,7 +564,6 @@ def Oct_Dec(Oct):	#~ Octal a Decimal.
 
 
 
-#~ https://codescracker.com/python/program/python-program-convert-octal-to-hexadecimal.htm
 #=============================================================================
 #================================== Menú Asc =================================
 #=============================================================================
@@ -668,7 +667,6 @@ def Asc_Menu():
 			time.sleep(0.5)
 			break
 			
-
 
 
 #=============================================================================
